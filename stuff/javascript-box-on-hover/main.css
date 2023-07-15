@@ -1,0 +1,20 @@
+body { font: small-caps 12px "Verdana", sans-serif; }
+
+a { color: #000000; }
+
+div {
+ padding: 4px;
+ margin: 4px;
+ width: 40%;
+}
+
+div.main {
+ border: 2px solid #CCCCCC;
+ background: #EEEEEE;
+}
+
+div.second {
+ background: #DDDDDD;
+ position: absolute;
+ display: none;
+}

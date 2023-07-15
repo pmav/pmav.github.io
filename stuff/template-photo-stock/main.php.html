@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <title>IS 2008</title>
+ </head>
+ <body>
+  <div id="wrapper">
+   <div id="header">
+    <a href="main.php" title="Home">Integração de Sistemas 2008 / TP2</a>
+   </div>
+   <div id="body">
+
+    <div id="menu">
+     <a href="main.php">home</a> <a href="my-photos.php">my photos</a> <a href="invoice-list.php">my invoices</a> <a href="browse.php">browse</a> <a href="#">help</a> <a href="index.php">logout</a>
+    </div>
+
+    <h1>Search new Photos</h1>
+
+    <form action="search.php" method="get">
+     <p>
+      <fieldset>
+       <legend>search</legend>
+       <input type="text" value="search string" name="s" />
+      </fieldset>
+     </p>
+
+     <p>
+      <span>
+       <input type="radio" name="type" value="0" checked="checked" />Title or Description
+      </span>
+      
+      <span>
+       <input type="radio" name="type" value="1" />Tags
+      </span>
+     </p>
+
+     <p>
+      <input type="submit" value="Search" class="submit" />
+     </p>
+    </form>
+
+
+    <div class="l col-list-left">
+     <h1>My Photos</h1>
+
+     <div class="list">
+      <div class="entry"><a href="my-photo.php">Donec vitae nisl. In molestie nunc non tortor.</a></div>
+      <div class="entry"><a href="my-photo.php">Lorem ipsum dolor sit amet.</a></div>
+      <div class="entry"><a href="my-photo.php">Etiam placerat commodo ante.</a></div>
+      <div class="entry"><a href="my-photo.php">Ut eleifend porta arcu. Praesent pretium orci tristique</a></div>
+      <div class="entry"><a href="my-photos.php">all my photos...</a></div>
+     </div>
+    </div>
+
+
+    <div class="l col-list">
+     <h1>My Invoices</h1>
+
+     <div class="list">
+      <div class="entry"><a href="invoice.php">Lorem ipsum dolor sit amet.</a></div>
+      <div class="entry"><a href="invoice.php">Ut eleifend porta arcu. Praesent pretium orci tristique</a></div>
+      <div class="entry"><a href="invoice.php">Donec vitae nisl. In molestie nunc non tortor.</a></div>
+      <div class="entry"><a href="invoice.php">Etiam placerat commodo ante.</a></div>
+      <div class="entry"><a href="invoice-list.php">all my invoices...</a></div>
+     </div>
+    </div>
+
+    <div class="cl">&nbsp;</div>
+
+   </div>
+   <div id="footer">IS 2008 / TP2 / pmav, <a href="mailto:pedrovam@gmail.com">pedrovam@gmail.com</a> / <a href="http://pmav.eu">pmav.eu</a></div>
+  </div>
+
+  <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+ </body>
+</html>

@@ -1,0 +1,131 @@
+body {
+ color: #000000;
+ margin: 0;
+}
+
+#container {
+ width: 920px;
+}
+
+/* ################################ */
+
+#input {
+ font: 13px "Verdana", sans-serif;
+ letter-spacing: -1px;
+ background: pink;
+ width: 200px;
+ float: left; 
+}
+
+#input form {
+ margin: 4px 0 0 0;
+}
+
+#input form fieldset {
+ border-top: 2px solid #000000;
+ margin: 0 1px 8px 1px;
+ border-bottom: 0;
+ border-right: 0;
+ border-left: 0;
+ padding: 2px;
+}
+
+#input form fieldset legend {
+ margin: 0 0 0 10px;
+ font-weight: bold;
+ color: #000000;
+}
+
+#input form fieldset input {
+ letter-spacing: 0;
+}
+
+#input form fieldset input.button {
+ padding: 1px 2px;
+}
+
+#input form fieldset span.reset {
+ cursor: pointer;
+}
+
+#input form fieldset input.special {
+ margin: 0 0 2px 0;
+}
+
+/* ################################ */
+
+#output {
+ width: 700px;
+ float: left;
+}
+
+#output #info {
+ margin: 0 10px 10px 10px;
+ background: lightgreen;
+ padding: 4px 0 6px 0;
+}
+
+#output #info form fieldset {
+ border-top: 2px solid #000;
+ border-right: 0;
+ border-bottom: 0;
+ border-left: 0;
+ float: left;
+}
+
+#output #info form fieldset legend {
+ font: bold 13px "Verdana", sans-serif;
+ letter-spacing: -1px;
+ margin: 0 0 0 10px;
+ color: #000000;
+}
+
+#output #info form fieldset.code {
+ width: 300px;
+}
+
+#output #info form fieldset.code textarea {
+ font-size: 12px;
+ height: 100px;
+ width: 300px;
+}
+
+#output #info form fieldset.text {
+ width: 300px;
+ float: right;
+}
+
+#output #info form fieldset.text textarea {
+ height: 100px;
+ width: 300px;
+}
+
+#output #info div.cl {
+ line-height: 0;
+ clear: left;
+}
+
+#output #outputtext {
+ border: 1px solid #000000;
+ padding: 6px;
+ margin: 10px;
+}
+
+/* ################################ */
+
+#footer {
+ font: bold 12px "Verdana", sans-serif;
+ letter-spacing: 1px;
+ margin: 0 0 0 18px;
+ padding: 6px 2px 0;
+ clear: both;
+}
+
+#footer a {
+ text-decoration: none;
+ color: #000000;
+}
+
+#footer a:hover {
+ text-decoration: underline;
+}

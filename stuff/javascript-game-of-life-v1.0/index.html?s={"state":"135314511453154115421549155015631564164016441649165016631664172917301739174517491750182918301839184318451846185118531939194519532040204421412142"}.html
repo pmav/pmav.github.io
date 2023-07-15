@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <script src="http://yui.yahooapis.com/2.6.0/build/yahoo/yahoo-min.js"></script>
+  <script src="http://yui.yahooapis.com/2.6.0/build/json/json-min.js"></script>
+  <script type="text/javascript" src="gol.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Game of Life</title>
+ </head>
+ <body onload="GOL.init()">
+ 
+  <div id="title">
+   <a href=".">Game of Life</a>
+  </div>
+
+  <div id="world"></div>
+
+  <div id="patterns">
+   <h2>Patterns</h2>
+   <ul>
+    <li><a href="?s={%22state%22:%22110211051206130213061403140414051406%22}">Lightweight Spaceship</a></li>
+    <li><a href="?s={%22state%22:%22081908200826082709200921092509261017102010221024102610291117111811191121112211241125112711281129121812201222122412261228131913201321132513261327151915201521152515261527161816201622162416261628171717181719172117221724172517271728172918171820182218241826182919201921192519262019202020262027%22}">Pulsar</a> (three-phase oscillator)</li>
+    <li><a href="?s={%22state%22:%222041214322402241224422452246%22}">Acorn</a> (incomplete)</li>
+    <li><a href="?s={%22state%22:%22135314511453154115421549155015631564164016441649165016631664172917301739174517491750182918301839184318451846185118531939194519532040204421412142%22}">Gosper Glider Gun</a></li>
+   </ul>
+   <p>Note: the universe is finite. Some patterns grow too much and hit the border, compromising future states.</p>
+   <p>This version uses the most basic algorithm imaginable and a HTML table for output. A second version using a better algorithm (based on <a href="http://dotat.at/prog/life/life.html">Tony Finch's</a> implementation) and Canvas is under development.</p>
+  </div>
+
+  <div id="control">
+   <form>
+    <input type="button" onclick="GOL.buttonRun(this)" value="Run" id="buttonRun" />
+    <input type="button" onclick="GOL.buttonNextStep()" value="Step" />
+    <input type="button" onclick="GOL.buttonClear()" value="Clear" />
+    <input type="button" onclick="GOL.exportState()" value="Export" />
+    <span id="exportUrl"> | <a id="exportUrlLink">Link</a> | <a id="exportTinyUrlLink">TinyURL</a></span>
+   </form>
+   <p>Generation: <span id="generation">0</span></p>
+   <p>Step time: <span id="steptime"></span> ms</p>
+  </div>
+
+  <div id="footer">
+   Game of Life | <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" title="Conway's Game of Life">wiki</a> | src: <a href="gol.js" title="Javascript Source">js</a>, <a href="style.css" title="CSS Stylesheet">css</a> | <a href="http://pmav.eu">pmav.eu</a> | 2008/2009
+  </div>
+  <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+ </body>
+</html>

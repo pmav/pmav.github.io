@@ -1,0 +1,22 @@
+div {
+ width: 200px;
+ border: 3px solid #8B6C6D;
+ background-color: #D9A9AB;
+ display: none;
+}
+ 
+p {
+ padding: 5px;
+ font: bold 16px "Lucida Sans";
+ background-color: #B38B8D;
+ border-top: 3px double #D9A9AB;
+ border-bottom: 3px double #D9A9AB;
+ font-variant: small-caps;
+ text-align: center;
+}
+
+span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}

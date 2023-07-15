@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <script type="text/javascript" src="assets/js/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="assets/js/animation-min.js"></script>
+    <script type="text/javascript" src="assets/js/dragdrop-min.js"></script>
+    <script type="text/javascript" src="assets/js/slider-min.js"></script>
+    <script type="text/javascript" src="assets/js/rainbow.js"></script>
+    <script type="text/javascript" src="assets/js/element-min.js"></script>
+    <script type="text/javascript" src="assets/js/colorpicker-min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts-min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slider.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/colorpicker.css" />
+
+    <title>Rainbow Colors</title>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="title">
+        <h1>Rainbow Colors</h1>
+      </div>
+
+      <div id="body">
+
+        <div class="l">
+          <div id="colors"></div>
+        </div>
+
+        <div class="l" id="controls">
+
+          <form action="#">
+            <fieldset class="submit">
+              <legend>1. Color List (editable)</legend>
+              <textarea id="colorslist" class="c">FF0000 FFA500 FFFF00 008000 0000FF 4B0082 EE82EE</textarea>
+              <div id="error"></div>
+              <div id="colorpicker"></div>
+              <input class="s" type="button" id="gethex" value="Add Color" />
+            </fieldset>
+
+            <fieldset>
+              <legend>2. Number of Colors</legend>
+              <div id="slider-bg" class="yui-h-slider" tabindex="-1">
+                <div id="slider-thumb" class="yui-slider-thumb"><img src="assets/images/thumb-n.gif" /></div>
+              </div>
+              <span id="slider-value"></span> between
+            </fieldset>
+
+            <fieldset>
+              <legend>3. Output (<span id="colorsnumberoutput"></span> colors)</legend>
+              <textarea id="colorslistoutput" class="c xl"></textarea>
+            </fieldset>
+
+            <fieldset class="submit">
+              <legend>4. Share</legend>
+              <input class="s" type="button" value="Generate URL" id="share" />
+              <span id="shareoutput"></span>
+            </fieldset>
+          </form>
+
+        </div>
+
+        <div class="cl">&nbsp;</div>
+      </div>
+
+      <div id="footer">
+        Rainbow Colors // <a href="http://pmav.eu">pmav.eu</a> // 2009
+        <p><a href="http://www.webtoolkit.info/javascript-trim.html">webtoolkit</a> // <a href="http://www.lexipixel.com/graphics/roygbiv.htm">lexipixel</a></p>
+      </div>
+    </div>
+
+    <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+  </body>
+</html>

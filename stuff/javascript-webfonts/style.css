@@ -1,0 +1,111 @@
+body {
+	color: #000000;
+ padding: 0;
+ margin: 0;
+}
+
+h1, h2, p, div {
+ width: 900px;
+}
+
+/* ******************************************
+ * Size Box */
+#box {
+ font: bold 18px/32px "Verdana", sans-serif;
+ text-align: center;
+ position: fixed;
+ width: 120px;
+ top: 0;
+}
+
+#box #p, #box #m, #box #r {
+ border-bottom: 2px solid #000000;
+ cursor: pointer;
+}
+
+/* ******************************************
+ * Header */
+h1 {
+ font: bold 42px/44px "Arial", sans-serif;
+ margin: 10px auto 0 auto;
+ letter-spacing: -2px;
+ word-spacing: 8px;
+}
+
+h2 {
+ font: bold 24px "Arial", sans-serif;
+ margin: 0 auto 48px auto;
+ letter-spacing: 2px; 
+ padding: 0 0 0 10px;
+ color: #D32D27;
+}
+
+/* ******************************************
+ * Font Entry */
+p {
+ border-top: 6px solid #000000;
+ margin: 0 auto 48px auto;
+ text-align: justify;
+ padding: 6px 0 0 0;
+ line-height: 18px;
+ font-size: 14px;
+}
+
+p > span {
+ padding: 0 10px 0 0;
+ line-height: 32px;
+ font-size: 42px;
+ float: left;
+}
+
+/* ******************************************
+ * Footer */
+#footer {
+ font: bold 16px "Verdana", sans-serif;
+ margin: 0 auto 10px auto;
+ letter-spacing: 2px;
+ padding: 0 0 0 10px;
+ text-align: center;
+ color: #000000;
+}
+
+#footer a {
+ border-bottom: 2px solid #000000;
+ text-decoration: none;
+ color: #000000;
+ padding: 1px;
+}
+
+#footer a:hover {
+ border-bottom: none;
+}
+
+/* ******************************************
+ * Fonts */
+#arial {
+ font-family: "Arial", sans-serif;
+}
+
+#courier {
+ font-family: "Courier", sans-serif;
+}
+
+#georgia {
+ font-family: "Georgia", serif;
+}
+
+#lconsole {
+ font-family: "Lucida Console", sans-serif;
+}
+
+#lunicode {
+ font-family: "Lucida Sans Unicode", sans-serif;
+}
+
+#times {
+ font-family: "Times New Roman", serif;
+}
+
+#verdana {
+ font-family: "Verdana", sans-serif;
+}

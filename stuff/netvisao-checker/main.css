@@ -1,0 +1,106 @@
+/* **************************************************** *
+ * http://pmav.eu/stuff/netvisao-checker/ - 10/Ago/2006 *
+ * **************************************************** */
+
+body {
+ background: #DFDEFF;
+ text-align: center;
+ color: #000000;
+ padding: 0px;
+ margin: 0px;
+}
+
+#alert {
+ border: 4px solid red;
+ margin: 0 10px 10px 10px;
+ padding: 8px;
+ background: #FF6060;
+
+ font: 16px/19px "Arial", sans-serif;
+ text-align: justify;
+ font-weight: bold;
+}
+
+div#title {
+ font: bold 70px/66px "Verdana", sans-serif;
+ margin: 10px auto 10px auto;
+ background-color: #676882;
+ letter-spacing: -10px;
+ text-align: left;
+ color: inherit;
+}
+
+div#container {
+ margin: 0px auto 0px auto;
+ border: 1px solid #000000;
+ background: #EDEDFF;
+ padding: 20px 0px;
+ text-align: left;
+ color: inherit;
+ width: 700px;
+}
+
+
+/* #############################################
+### Item: title + body */
+
+div#container span.title {
+ border-bottom: 1px dotted #676882;
+ font: 18px "Georgia", serif;
+ margin: 10px;
+}
+
+div#container div.ie-crap {
+ text-align: center;
+}
+
+div#container div.body {
+ font: 14px "Verdana", sans-serif;
+ margin: 5px auto 0px auto;
+ text-align: justify;
+ width: 650px;
+}
+
+div#container div.sep { margin: 50px auto; }
+
+div#container div.body div.fl { float: left; width: 180px; }
+div#container div.body div.fr { float: right; border: 1px solid #000000; padding: 3px 3px 0 3px; background: #DFDEFF; color: inherit; }
+div#container div.body div.cl { clear: both; }
+
+
+/* #############################################
+### Text Style */
+
+div#container div.body a {
+ background: #dbdcff;
+ color: #000000;
+}
+
+div#container div.body a:hover { text-decoration: none; }
+
+div#container div.body span.red {
+ background-color: #FF8A8A;
+ font-weight: bold;
+ font-size: 12px;
+ color: inherit;
+}
+
+div#container div.body span.code { font: italic 14px "Verdana", sans-serif; }
+
+div#container div.body span.m { font-weight: bold; }
+
+
+/* #############################################
+### Footer */
+
+div#footer {
+ font: bold 12px "Verdana", sans-serif;
+ margin: 4px auto 12px auto;
+ letter-spacing: 1px;
+ text-align: center;
+}
+
+div#footer a {
+ background-color: inherit;
+ color: #000000;
+}

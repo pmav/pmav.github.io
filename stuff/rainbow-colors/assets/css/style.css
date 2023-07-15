@@ -1,0 +1,152 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+.l {
+  float: left;
+}
+
+.cl {
+  line-height: 0;
+  clear: both;
+}
+
+#wrapper {
+  background: #FFFFFF;
+  margin: auto;
+  width: 910px;
+}
+
+#title {
+  margin: 0;
+}
+
+#title h1 {
+  border-bottom: 1px solid #333333;
+  padding: 10px 0 10px 4px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  font-size: 42px;
+}
+
+#body {
+  margin-bottom: 16px;
+}
+
+#body #colors p {
+  font: 12px 'Consolas', monospace;
+  margin: 0;
+}
+
+#body #colors p span {
+  display: inline-block;
+  width: 370px;
+}
+
+#body #controls {
+  margin-left: 10px;
+}
+
+#body #controls form {
+  font-size: 18px;
+}
+
+#body #controls form input, #body #controls form textarea {
+  border: 1px solid #555555;
+  background: #F5F5F5;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+#body #controls form #error {
+  font: bold 12px "Verdana", sans-serif;
+  margin-bottom: 10px;
+  background: #FF0000;
+  color: #FFFFFF;
+  display: none;
+  padding: 4px;
+}
+
+#body #controls form textarea {
+  font: 14px "Consolas", monospace;
+}
+
+#body #controls #colorpicker {
+  border: 1px solid #555555;
+  background: #F5F5F5;
+  position: relative;
+  font-size: 10px;
+  height:198px;
+  width: 418px;
+}
+
+#body #controls #colorpicker input {
+  font-size: 10px;
+  color: #000000;
+}
+
+#body #controls form fieldset {
+  border: 1px solid #000000;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+  width: 420px;
+}
+#body #controls form fieldset.submit {
+  padding-bottom: 0;
+}
+
+#body #controls form textarea.c {
+  text-transform: uppercase;
+  height: 60px;
+  width: 414px;
+}
+
+#body #controls form textarea.xl {
+  height: 240px;
+}
+
+#body #controls form input.n {
+  text-align: right;
+  width: 26px;
+}
+
+#body #controls #gethex {
+  margin-top: 10px;
+}
+
+#body #controls form input.s, #gethex {
+  font-size: 24px;
+  padding: 1px;
+  border-bottom: 1px solid #222;
+  border-right: 1px solid #222;
+  border-left: 1px solid #999;
+  border-top: 1px solid #999;
+}
+
+#body #controls form input.s:hover, #gethex:hover {
+  border-bottom: 1px solid #999;
+  border-right: 1px solid #999;
+  border-left: 1px solid #222;
+  border-top: 1px solid #222;
+  cursor: pointer;
+}
+
+#body #shareoutput a {
+  color: blue;
+}
+
+#footer {
+  padding: 20px 0 2px;
+  text-align: center;
+}
+
+#footer a {
+  color: #000000;
+}

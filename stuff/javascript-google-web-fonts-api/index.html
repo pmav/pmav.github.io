@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+        </script>
+        <script>
+            (function() {
+            
+                var A = {
+                    fonts: ['Cantarell', 'Cardo', 'Black Ops One', 'Gloria Hallelujah', 'Annie Use Your Telescope'],
+                    
+                    inputElement: null,
+                    outputElement: null,
+                    fontElement: null,
+                    
+                    inputKeyUpHandler: function(event)
+                    {
+                        A.outputElement.css('font-family', $('#font option:selected').val());
+                        
+                        A.outputElement.html(A.inputElement.val());
+                    },
+                    
+                    fontChangeHandler: function(event)
+                    {
+                        A.outputElement.css('font-family', $('#font option:selected').val());
+                    },
+                    
+                    init: function()
+                    {
+                        // Cache
+                        A.inputElement = $('#input');
+                        A.outputElement = $('#output');
+                        A.fontElement = $('#font');
+                        
+                        // Load fonts
+                        var select = '<select id="font">';
+                        
+                        for (var i = 0; i < A.fonts.length; i++) 
+                        {
+                            var link = $("<link>");
+                            
+                            link.attr({
+                                type: 'text/css',
+                                rel: 'stylesheet',
+                                href: 'http://fonts.googleapis.com/css?family=' + A.fonts[i]
+                            });
+                            
+                            $("head").append(link);
+                            
+                            select += '<option value="' + A.fonts[i] + '">' + A.fonts[i] + '</option>';
+                        }
+                        select += '</select>';
+                        
+                        // Append controls
+                        $('#controls').append('Font ' + select);
+                        
+                        // Events
+                        A.inputElement.bind('keyup', A.inputKeyUpHandler)
+						
+                        $('#font').bind('change', A.fontChangeHandler);
+						
+                        A.inputKeyUpHandler();
+                    }
+                };
+                
+                $(document).ready(A.init);
+            })();
+        </script>
+        <style>
+            a {
+                color: blue;
+            }
+
+            #wrapper {
+                width: 800px;
+                font-family: Helvetica, Arial, sans-serif;
+                margin: auto;
+            }
+
+            #header {
+                border-bottom: 4px solid black;
+                font-size: 32px;
+            }
+
+            #content {
+                margin: 20px 0;
+            }
+
+            #content textarea {
+                border: 1px solid black;
+                width: 780px;
+                height: 200px;
+                padding: 10px;
+            }
+
+            #controls {
+                float: right;
+            }
+
+            #controls select {
+
+            }
+
+            #output {
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            #footer {
+                border-top: 4px solid black;
+            }
+        </style>
+        <title>Google Web Fonts API Example</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                Google Web Fonts API Example
+            </div>
+            <div id="content">
+                <p>Check <a href="http://www.google.com/webfonts">Google Web Fonts</a> for more information. This page contains a basic example on how to use Gooogle Web Font API (just look at the source code of this page).<br/></p>
+                Text
+                <div id="controls">
+                </div>
+                <textarea id="input">Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'</textarea>
+                <p>
+
+                </p>
+                Output
+                <div id="output">
+                </div>
+            </div>
+            <div id="footer">
+                Google Web Fonts API / May 2010 / <a href="http://pmav.eu" title="pmav.eu">pmav.eu</a>
+            </div>
+        </div>
+    </body>
+</html>

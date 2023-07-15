@@ -1,0 +1,288 @@
+body {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    background: #FFFFFF;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+ text-decoration: none;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+.cl {
+    line-height: 0;
+    clear: left;
+}
+
+
+.overlayer {
+    font: 24px "Helvetica Neue", "Arial", sans-serif;
+    text-decoration: none;
+
+    position: absolute;
+    color: #FFFFFF;
+    height: 116px;
+    width: 116px;
+    background: #000000;
+    cursor: pointer;
+    padding: 6px;
+    display: none;
+}
+
+#wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+/* --------------------------------- */
+
+header {
+    line-height: 72px;
+
+    padding: 0 10px;
+    letter-spacing: -1px;
+    word-spacing: 4px;
+    text-align: left;
+    font-size: 46px;
+    color: #000000;
+}
+
+header .c {
+    color: #B30000;
+}
+
+header .s {
+    font-size: 32px;
+    line-height: 0;
+}
+
+header #search-box {
+	width: 536px
+}
+
+header #search-legend {
+    font-size: 24px;
+    display: hidden;
+}
+
+header input {
+    font: 24px "Georgia", serif;
+    border: 1px solid #EEEEEE;
+    background: #EEEEEE;
+    font-style: italic;
+    padding: 2px 4px;
+    color: #B30000;
+	margin: 0;
+}
+
+/* --------------------------------- */
+
+#intro
+{
+	margin: 23px 0 23px 0;
+	border-top: 1px solid #000000;
+	padding: 26px 9px 7px 9px;
+}
+
+#intro p
+{
+	font-size: 22px;
+	line-height: 26px;
+}
+
+#intro p span
+{
+	color: #B30000;
+}
+
+/* --------------------------------- */
+
+
+#main .main-projects,
+#main .minor-projects {
+    border-top: 1px solid #000000;
+    padding: 26px 0 7px 0;
+    position: relative;
+}
+
+#main .main-projects .item,
+#main .minor-projects .item {
+    margin: 15px 9px 25px 9px;
+	width: 482px;
+	float: left;
+}
+
+#main .main-projects .xl,
+#main .minor-projects .xl {
+    width: 982px;
+}
+
+#main .main-projects .item .info,
+#main .minor-projects .item .info {
+	margin: 0 0 0 10px;
+	width: 338px;
+}
+
+#main .main-projects .xl .info,
+#main .minor-projects .xl .info {
+    width: 838px;
+}
+
+#main .main-projects .item .info a.title,
+#main .minor-projects .item .info a.title {
+	text-decoration: none;
+}
+
+#main .main-projects .item .info h1,
+#main .minor-projects .item .info h1 {
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 18px;
+	margin: 4px 0 0 0;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 0 0 8px 0;
+	color: #000000;
+}
+
+#main .main-projects .item .info h1:hover,
+#main .minor-projects .item .info h1:hover {
+	color: #B30000;
+}
+
+#main .main-projects .item .info p,
+#main .minor-projects .item .info p {
+	margin: 10px 0 0 0;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+#main .main-projects .item .info p a,
+#main .minor-projects .item .info p a {
+	color: #B30000;
+	text-decoration: none;
+}
+
+#main .main-projects .item img,
+#main .minor-projects .item img {
+    border: 1px solid #333;
+    padding: 1px;
+}
+
+#main .main-projects .item .info .tag,
+#main .minor-projects .item .info .tag
+{
+	background: #DDDDDD;
+	color: #333333;
+	border-radius: 6px;
+	padding: 4px 8px;
+	margin-top: 20px;
+	cursor: default;
+}
+
+#main .main-projects .item .info .tag:hover,
+#main .minor-projects .item .info .tag:hover
+{
+	background: #333333;
+	color: #DDDDDD;
+}
+
+/* --------------------------------- */
+
+#blocks
+{
+    padding: 8px 10px 10px;
+    border-top: 1px solid #000000;
+    display: none;
+}
+
+#blocks div
+{
+    border-left: 8px solid #B30000;
+    background: #000;
+    margin: 6px 0;
+    padding: 10px;
+    font-size: 22px;
+}
+
+#blocks div:hover
+{
+    border-left: 8px solid #000;
+    background: #B30000;
+}
+
+#blocks p
+{
+    color: #BBB;
+    font-size: 14px;
+    padding: 10px 0 0 0;
+}
+
+#blocks a
+{
+    text-decoration: none;
+    color: #FFF;
+}
+
+#blocks a:hover {
+
+}
+
+/* --------------------------------- */
+
+#links {
+    border-top: 1px solid #000000;
+    padding: 8px 10px 10px;
+    letter-spacing: 0;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+#links a {
+    text-decoration: none;
+    padding: 2px 8px;
+    background: #EEEEEE;
+    color: #B30000;
+}
+
+#links a:hover {
+    background: #B30000;
+    color: #FFFFFF;
+}
+
+/* --------------------------------- */
+
+footer {
+    border-top: 1px solid #000000;
+    padding: 4px 10px 10px;
+    letter-spacing: 0;
+    line-height: 32px;
+    font-size: 18px;
+    color: #000000;
+}
+
+footer span {
+    color: #B30000;
+}
+
+footer a {
+    text-decoration: none;
+    color: #B30000;
+}
+
+footer a:hover {
+    color: #000000;
+}
+
+footer .small {
+    font-size: 14px;
+}

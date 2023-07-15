@@ -1,0 +1,43 @@
+body {
+ background: #000000;
+ color: #FFFFFF;
+}
+
+#title {
+ width: 100%;
+ text-align: right;
+ font: 42px "Arial", sans-serif;
+}
+
+#main {
+ margin: 100px auto 0;
+ line-height: 400px;
+ width: 90%;
+}
+
+#main:hover {
+ cursor: pointer;
+}
+
+
+#dialog {
+ display: none;
+ position: absolute;
+ left: 100px;
+ top: 100px;
+
+ filter: alpha(opacity=0);
+ opacity: 0.0;
+}
+
+
+.color {
+ float: left;
+ width: 50px;
+ line-height: 50px;
+}
+
+.color:hover {
+ /* border-bottom: 8px solid lightgreen; */
+ cursor: pointer;
+}

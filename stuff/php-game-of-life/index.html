@@ -1,0 +1,86 @@
+<html>
+ <head>
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+  <script type="text/javascript">_uacct="UA-284702-1"; urchinTracker();</script>
+  <title>Game of Life</title>
+  <link rel="stylesheet" type="text/css" href="gol.css" />
+ </head>
+ <body>
+
+  <div class="title">Game of Life</div>
+
+  <p />
+
+  <form method="post" action="gol.php">
+
+   <table class="main" align="center">
+
+    <tr>
+     <td class="cell-text" width="100%">Width</td>
+     <td class="cell"><input name="largura" type="text" size="5" value="15" class="form" /></td>
+    </tr>
+
+    <tr>
+     <td class="cell-text">Height</td>
+     <td class="cell"><input name="altura" type="text" size="5" value="15" class="form" /></td>   
+    </tr>
+
+    <tr>
+     <td class="cell-text">Population</td>
+     <td class="cell"><input name="popu" type="text" size="5" value="30" class="form" /></td>
+    </tr>
+
+    <tr>
+     <td class="cell-text">Random Positions</td>
+     <td class="cell"><input name="pos" type="radio" checked="checked" class="form" value="0" /></td>
+    </tr>
+
+    <tr>
+     <td class="cell-text">Manual Positions</td>
+     <td class="cell"><input name="pos" type="radio" class="form" value="1" /></td>
+    </tr>
+
+
+    <tr>
+     <td class="cell" colspan="2" align="center"><input type="submit" name="submit" value="Start" class="form" /></td>
+    </tr>
+
+   </table>
+
+   <input name="start" type="hidden" value="1" />
+   <input name="generation" type="hidden" value="0" /><br />
+
+  </form>
+
+
+  <hr />
+
+  <span>
+   Notes:<br />
+   . 0 < Width <= 100<br />
+   . 0 < Height <= 100<br />
+   . 0 < Population <= Width*Height<br />
+   . The grid is not infinite
+  </span>
+
+  <hr />
+
+  <span>
+   Rules:<br />
+   1. Any live cell with fewer than two neighbours dies of loneliness.<br />
+   2. Any live cell with more than three neighbours dies of crowding.<br />
+   3. Any dead cell with exactly three neighbours comes to life.<br />
+   4. Any live cell with two or three neighbours lives, unchanged, to the next generation.
+  </span>
+
+  <hr />
+  <span>
+   GOL v2.0 - 25/Jan/2006<br />
+   &lt;<a href="http://pmav.eu">pv</a>&gt;
+   &lt;<a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">wp</a>&gt;
+ </span>
+
+  <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+ </body>
+</html>

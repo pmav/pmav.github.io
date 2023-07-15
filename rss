@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <atom:link href="http://pmav.eu/rss" rel="self" type="application/rss+xml" />
+  <title>pmav.eu</title>
+  <link>http://pmav.eu</link>
+  <description>pmav.eu: new projects</description>
+  <language>en-us</language>
+  <lastBuildDate>Sat, 15 Jul 2023 03:38:03 -0700</lastBuildDate>
+  <item>
+   <title>Picbit</title>
+   <link>http://pmav.eu/stuff/picbit</link>
+   <description>Picbit</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/picbit</guid>
+  </item>
+  <item>
+   <title>Pictar</title>
+   <link>http://pmav.eu/stuff/pictar</link>
+   <description>Pictar</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/pictar</guid>
+  </item>
+  <item>
+   <title>Javascript Game of Life v3.1.1</title>
+   <link>http://pmav.eu/stuff/javascript-game-of-life-v3.1.1</link>
+   <description>Javascript Game of Life v3.1.1</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-game-of-life-v3.1.1</guid>
+  </item>
+  <item>
+   <title>Javascript Web Workers</title>
+   <link>http://pmav.eu/stuff/javascript-webworkers</link>
+   <description>Javascript Web Workers</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-webworkers</guid>
+  </item>
+  <item>
+   <title>Rainbow Colors</title>
+   <link>http://pmav.eu/stuff/rainbow-colors</link>
+   <description>Rainbow Colors</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/rainbow-colors</guid>
+  </item>
+  <item>
+   <title>KPascal Compiler</title>
+   <link>http://pmav.eu/stuff/kpascal-compiler</link>
+   <description>KPascal Compiler</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/kpascal-compiler</guid>
+  </item>
+  <item>
+   <title>Javascript N-Queens</title>
+   <link>http://pmav.eu/stuff/javascript-nqueens</link>
+   <description>Javascript N-Queens</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-nqueens</guid>
+  </item>
+  <item>
+   <title>procvm</title>
+   <link>http://pmav.eu/stuff/procvm</link>
+   <description>procvm</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/procvm</guid>
+  </item>
+  <item>
+   <title>Javascript Hash Code</title>
+   <link>http://pmav.eu/stuff/javascript-hash-code</link>
+   <description>Javascript Hash Code</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-hash-code</guid>
+  </item>
+  <item>
+   <title>Javascript Text Formatter</title>
+   <link>http://pmav.eu/stuff/javascript-text-formatter</link>
+   <description>Javascript Text Formatter</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-text-formatter</guid>
+  </item>
+  <item>
+   <title>Javascript Hashing Functions</title>
+   <link>http://pmav.eu/stuff/javascript-hashing-functions</link>
+   <description>Javascript Hashing Functions</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-hashing-functions</guid>
+  </item>
+  <item>
+   <title>O seu número do BI está correcto?</title>
+   <link>http://pmav.eu/stuff/numero-do-bilhete-de-identidade</link>
+   <description>O seu número do BI está correcto?</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/numero-do-bilhete-de-identidade</guid>
+  </item>
+  <item>
+   <title>Semantic Youtube Links</title>
+   <link>http://pmav.eu/stuff/semantic-youtube-links</link>
+   <description>Semantic Youtube Links</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/semantic-youtube-links</guid>
+  </item>
+  <item>
+   <title>1Gallery</title>
+   <link>http://pmav.eu/stuff/1gallery</link>
+   <description>1Gallery</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/1gallery</guid>
+  </item>
+  <item>
+   <title>Meo Box API</title>
+   <link>http://pmav.eu/stuff/meobox-api</link>
+   <description>Meo Box API</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/meobox-api</guid>
+  </item>
+  <item>
+   <title>Javascript Simple i18n</title>
+   <link>http://pmav.eu/stuff/javascript-simple-internationalization</link>
+   <description>Javascript Simple i18n</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-simple-internationalization</guid>
+  </item>
+  <item>
+   <title>Random Word Generator</title>
+   <link>http://pmav.eu/stuff/random-word-generator</link>
+   <description>Random Word Generator</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/random-word-generator</guid>
+  </item>
+  <item>
+   <title>Javascript Fade In &amp; Out</title>
+   <link>http://pmav.eu/stuff/javascript-fade-in-out</link>
+   <description>Javascript Fade In &amp; Out</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-fade-in-out</guid>
+  </item>
+  <item>
+   <title>Museu da Ciência</title>
+   <link>http://pmav.eu/stuff/museu-da-ciencia</link>
+   <description>Museu da Ciência</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/museu-da-ciencia</guid>
+  </item>
+  <item>
+   <title>Javascript Google Web Fonts API</title>
+   <link>http://pmav.eu/stuff/javascript-google-web-fonts-api</link>
+   <description>Javascript Google Web Fonts API</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-google-web-fonts-api</guid>
+  </item>
+  <item>
+   <title>The Web Comics</title>
+   <link>http://pmav.eu/stuff/the-web-comics</link>
+   <description>The Web Comics</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/the-web-comics</guid>
+  </item>
+  <item>
+   <title>Template My Twitter</title>
+   <link>http://pmav.eu/stuff/template-my-twitter</link>
+   <description>Template My Twitter</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/template-my-twitter</guid>
+  </item>
+  <item>
+   <title>Javascript Name Generator</title>
+   <link>http://pmav.eu/stuff/javascript-name-generator</link>
+   <description>Javascript Name Generator</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-name-generator</guid>
+  </item>
+  <item>
+   <title>Javascript Game of Life v1.0</title>
+   <link>http://pmav.eu/stuff/javascript-game-of-life-v1.0</link>
+   <description>Javascript Game of Life v1.0</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-game-of-life-v1.0</guid>
+  </item>
+  <item>
+   <title>PHP Game of Life</title>
+   <link>http://pmav.eu/stuff/php-game-of-life</link>
+   <description>PHP Game of Life</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/php-game-of-life</guid>
+  </item>
+  <item>
+   <title>Clean it</title>
+   <link>http://pmav.eu/stuff/clean-it</link>
+   <description>Clean it</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/clean-it</guid>
+  </item>
+  <item>
+   <title>Template Photo Stock</title>
+   <link>http://pmav.eu/stuff/template-photo-stock</link>
+   <description>Template Photo Stock</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/template-photo-stock</guid>
+  </item>
+  <item>
+   <title>CSS Pins</title>
+   <link>http://pmav.eu/stuff/css-pins</link>
+   <description>CSS Pins</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/css-pins</guid>
+  </item>
+  <item>
+   <title>CSS Round Corners</title>
+   <link>http://pmav.eu/stuff/css-round-corners</link>
+   <description>CSS Round Corners</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/css-round-corners</guid>
+  </item>
+  <item>
+   <title>CSS Tags</title>
+   <link>http://pmav.eu/stuff/css-tags</link>
+   <description>CSS Tags</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/css-tags</guid>
+  </item>
+  <item>
+   <title>Javascript Background Color</title>
+   <link>http://pmav.eu/stuff/javascript-background-color</link>
+   <description>Javascript Background Color</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-background-color</guid>
+  </item>
+  <item>
+   <title>Javascript Box on Hover</title>
+   <link>http://pmav.eu/stuff/javascript-box-on-hover</link>
+   <description>Javascript Box on Hover</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-box-on-hover</guid>
+  </item>
+  <item>
+   <title>PHP Simple Auth</title>
+   <link>http://pmav.eu/stuff/php-simple-auth</link>
+   <description>PHP Simple Auth</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/php-simple-auth</guid>
+  </item>
+  <item>
+   <title>Netvisão Checker 1.5.2e</title>
+   <link>http://pmav.eu/stuff/netvisao-checker</link>
+   <description>Netvisão Checker 1.5.2e</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/netvisao-checker</guid>
+  </item>
+  <item>
+   <title>PHP ooNFO</title>
+   <link>http://pmav.eu/stuff/php-oonfo</link>
+   <description>PHP ooNFO</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/php-oonfo</guid>
+  </item>
+  <item>
+   <title>Javascript Random Data</title>
+   <link>http://pmav.eu/stuff/javascript-random-data</link>
+   <description>Javascript Random Data</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-random-data</guid>
+  </item>
+  <item>
+   <title>PHP Windows Uptime</title>
+   <link>http://pmav.eu/stuff/php-windows-uptime</link>
+   <description>PHP Windows Uptime</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/php-windows-uptime</guid>
+  </item>
+  <item>
+   <title>PHP Disk Status</title>
+   <link>http://pmav.eu/stuff/php-disk-status</link>
+   <description>PHP Disk Status</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/php-disk-status</guid>
+  </item>
+  <item>
+   <title>Passing by Reference with PHP and JS</title>
+   <link>http://pmav.eu/stuff/passing-by-reference-with-php-and-js</link>
+   <description>Passing by Reference with PHP and JS</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/passing-by-reference-with-php-and-js</guid>
+  </item>
+  <item>
+   <title>Javascript Drag &amp; Drop</title>
+   <link>http://pmav.eu/stuff/javascript-drag-and-drop</link>
+   <description>Javascript Drag &amp; Drop</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-drag-and-drop</guid>
+  </item>
+  <item>
+   <title>Javascript on the fly MD5</title>
+   <link>http://pmav.eu/stuff/javascript-md5-on-the-fly</link>
+   <description>Javascript on the fly MD5</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-md5-on-the-fly</guid>
+  </item>
+  <item>
+   <title>Javascript Move div</title>
+   <link>http://pmav.eu/stuff/javascript-move-div</link>
+   <description>Javascript Move div</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-move-div</guid>
+  </item>
+  <item>
+   <title>Javascript Paint</title>
+   <link>http://pmav.eu/stuff/javascript-paint</link>
+   <description>Javascript Paint</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-paint</guid>
+  </item>
+  <item>
+   <title>Javascript Puzzle</title>
+   <link>http://pmav.eu/stuff/javascript-puzzle</link>
+   <description>Javascript Puzzle</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-puzzle</guid>
+  </item>
+  <item>
+   <title>Javascript SVG Draw</title>
+   <link>http://pmav.eu/stuff/javascript-svg-draw</link>
+   <description>Javascript SVG Draw</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-svg-draw</guid>
+  </item>
+  <item>
+   <title>Javascript Web Fonts</title>
+   <link>http://pmav.eu/stuff/javascript-webfonts</link>
+   <description>Javascript Web Fonts</description>
+   <guid isPermaLink="true">http://pmav.eu/stuff/javascript-webfonts</guid>
+  </item>
+ </channel>
+</rss>

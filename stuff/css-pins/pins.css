@@ -1,0 +1,52 @@
+/***
+ * Pins - v1.0
+ * pmav.eu - 20/Mar/2006
+ **/
+
+
+
+/* ********************************* ********************************* *********************************
+ * UL LIST
+ * ********************************* */
+
+div#list {
+ width: 140px;
+ border: 2px solid #804000;
+ background-color: #fde4cb;
+}
+
+
+/* ### UL */
+div#list ul {
+ margin-bottom: 0px;
+ margin-top: 0px;
+}
+
+
+/* ### LI */
+div#list ul li {
+ list-style-image: url("img/pin1.gif");
+ padding: 0px 0px 0px 0px;
+ margin: 8px 0px 8px 0px;
+}
+
+
+/* ### LI:hover */
+div#list ul li:hover {
+ background-color: #f7d7b7;
+}
+
+
+/* ### Links */
+div#list ul li a {
+ border-bottom: 1px dotted #804000;
+ font: bold 14px Verdana;
+ text-decoration: none;
+ color: #683400;
+}
+
+/* ### Links:hover */
+div#list ul li a:hover {
+ text-decoration: underline overline;
+ border: none;
+}

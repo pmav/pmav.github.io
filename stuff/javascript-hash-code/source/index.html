@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Javascript HashCode Function</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="An implementation of a HashCode() function in Javascript." />
+        <meta name="keywords" content="javascript, hash, hashcode, md5" />
+        <meta name="author" content="pmav" />
+
+        <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+
+        <script type="text/javascript" src="assets/syntaxhighlighter/scripts/shCore.js"></script>
+        <script type="text/javascript" src="assets/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="assets/syntaxhighlighter/styles/shCore.css">
+        <link type="text/css" rel="stylesheet" href="assets/syntaxhighlighter/styles/shThemeDefault.css">
+        <script type="text/javascript">
+            SyntaxHighlighter.config.clipboardSwf = 'assets/syntaxhighlighter/scripts/clipboard.swf';
+            SyntaxHighlighter.all();
+        </script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <div id="header">
+                <h1>Javascript HashCode Function</h1>
+            </div>
+
+            <div id="main">
+
+                <div class="entry">
+
+                    <div class="info">
+                        <h2>Source Code</h2>
+
+                        Download: <a href="files/hashCode-v1.0.0.js" title="hashCode-v1.0.0.js">hashCode-v1.0.0.js</a> (save as)
+                    </div>
+
+                    <pre class="brush: jscript;">/**
+ * Javascript HashCode v1.0.0
+ * This function returns a hash code (MD5) based on the argument object.
+ * http://pmav.eu/stuff/javascript-hash-code
+ *
+ * Example:
+ *  var s = "my String";
+ *  alert(HashCode.value(s));
+ *
+ * pmav, 2010
+ */
+var HashCode = function() {
+
+    var serialize = function(object) {
+        // Private
+        var type, serializedCode = "";
+
+        type = typeof object;
+
+        if (type === 'object') {
+            var element;
+
+            for (element in object) {
+                serializedCode += "[" + type + ":" + element + serialize(object[element]) + "]";
+            }
+
+        } else if (type === 'function') {
+            serializedCode += "[" + type + ":" + object.toString() + "]";
+        } else {
+            serializedCode += "[" + type + ":" + object+"]";
+        }
+
+        return serializedCode.replace(/\s/g, "");
+    };
+
+    // Public, API
+    return {
+        value : function(object) {
+            return MD5(serialize(object));
+        }
+    };
+}();</pre>
+                </div>
+
+
+                <div class="entry">
+
+                    <div class="info">
+                        <h2>Example</h2>
+
+                        Download: <a href="files/javascript-hashcode-v1.0.0-example.zip" title="javascript-hashcode-v1.0.0-example.zip">javascript-hashcode-v1.0.0-example.zip</a>
+                    </div>
+
+                    <pre class="brush: jscript;">(function(){
+
+    Main = {
+
+        log : function(s) {
+            document.body.innerHTML += '<p>'+(new Date())+": "+s+'</p>';
+        },
+
+        init : function() {
+            var object1 = [];
+            var object2 = { f1 : function() { var i; }, a : [1, 2, "#", { m : function() { return 1; } }]};
+            var object3 = object2;
+            var object4 = function(arg) { arg++ };
+            var object5 = function(arg) { arg++ }(2);
+            var object6 = (function(arg) { arg++ })(2);
+
+            this.log("Object #1 - "+HashCode.value(object1));
+            this.log("Object #2 - "+HashCode.value(object2));
+            this.log("Object #3 - "+HashCode.value(object3));
+            this.log("Object #4 - "+HashCode.value(object4));
+            this.log("Object #5 - "+HashCode.value(object5));
+            this.log("Object #6 - "+HashCode.value(object6));
+        }
+    };
+})()</pre>
+                </div>
+
+
+            </div>
+            <div id="footer">Javascript HashCode Function | <a href="http://pmav.eu">pmav.eu</a> | 23/Jan/2010 | <a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01 Strict</a> | This work is licensed under a <a rel="license" href="../assets/LICENSE">MIT License</a>.</div>
+        </div>
+
+        <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+    </body>
+</html>

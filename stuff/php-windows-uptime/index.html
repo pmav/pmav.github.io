@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Windows Uptime with PHP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <style>
+      body {
+        font: 14px "Arial", sans-serif;
+        color: #000000;
+      }
+
+      pre {
+        border-left: 1px solid #DDDDDD;
+        padding: 2px 0 2px 10px;
+        background: #EEE;
+      }
+
+      img {
+        border: 1px solid #DDDDDD;
+        margin: 10px 0 0 0;
+      }
+
+      a {
+        color: #0000FF;
+      }
+
+      a:target {
+        background: #FFFF00;
+      }
+
+      .h {
+        display: none;
+      }
+
+      #message {
+        background: #EE0000;
+        margin: 0 0 20px 0;
+        font-weight: bold;
+        color: #FFFFFF;
+        padding: 6px;
+      }
+
+      #message a {
+        color: #FFFFFF;
+      }
+
+      #wrapper {
+        margin: auto;
+        width: 800px;
+      }
+
+      /* -------------------------------------- */
+
+      #header {
+        border-bottom: 4px solid #000000;
+        margin: 20px 0;
+      }
+
+      #header h1 {
+        margin: 0;
+      }
+
+      /* -------------------------------------- */
+
+      #main .box {
+        border: 1px solid #DDDDDD;
+        background: #F5F5F5;
+        margin: 0 0 40px 0;
+        padding: 6px;
+      }
+
+      #main .box h2 {
+        margin: 0 0 20px 0;
+      }
+
+      #main .box h4 {
+        border-bottom: 1px solid #DDDDDD;
+        margin-bottom: 6px;
+        margin-top: 30px;
+      }
+
+      #main .box p {
+        margin-top: 0;
+      }
+
+      #main .box .sliderContainer {
+        margin: 0 auto 20px;
+        width: 98%;
+      }
+
+      #main .box input {
+        border-top: 2px solid #CCCCCC;
+        border-right: 2px solid #CCCCCC;
+        border-bottom: 2px solid #666666;
+        border-left: 2px solid #666666;
+        background: #EEEEEE;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      #main .box #results {
+        border: 1px solid #EEEEEE;
+        background: #FFFFFF;
+        overflow: auto;
+        height: 100px;
+        padding: 5px;
+      }
+
+      #main .box .link {
+        text-decoration: underline;
+        cursor: pointer;
+        color: blue;
+      }
+
+      /* -------------------------------------- */
+
+      #footer {
+        border-top: 1px solid #000000;
+        padding: 2px 0;
+        margin: 20px 0;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <div id="header">
+        <h1>Windows Uptime with PHP</h1>
+      </div>
+
+      <div id="main">
+
+        <div class="box">
+          <p>
+            This class in PHP can be used to get the uptime of a Windows machine. It uses the creation date of a specific file, by default: 'c:\pagefile.sys'. This method is quite simple and may have some problems, don't use it for critical applications.
+          </p>
+
+          <h4>Source Code</h4>
+          <p>
+            All source code is online <a href="source.html" title="Source Code">here</a>.
+          </p>
+
+          <p>
+          <h4>How to use it</h4>
+          <code>
+            <pre>
+require_once ('WindowsUptime.class.php');
+
+$windowsUptime = new WindowsUptime();
+
+echo $windowsUptime->uptime(); // Default output format
+echo $windowsUptime->uptime(RAW_OUTPUT);
+
+echo $windowsUptime->upSince(); // Default output format
+echo $windowsUptime->upSince('d/M/Y');</pre>
+          </code>
+
+          </p>
+
+          <p>
+          <h4>Output</h4>
+          <code>
+            <pre>
+0 days 3 hours 21 minutes 17 seconds
+12077
+
+10/Sep/2009 @ 17:16
+10/Sep/2009
+            </pre>
+          </code>
+          </p>
+
+
+        </div>
+
+      </div>
+      <div id="footer">Windows Uptime with PHP | <a href="http://pmav.eu">pmav.eu</a> | 10/Sep/2009</div>
+    </div>
+    <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+  </body>
+</html>

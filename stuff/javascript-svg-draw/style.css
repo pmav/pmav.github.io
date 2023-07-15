@@ -1,0 +1,9 @@
+#svgsource {
+  display: block;
+  background: black;
+  color: #CCC;
+  padding: 6px;
+  width: 800px;
+  height: 400px;
+  overflow: auto;
+}

@@ -1,0 +1,111 @@
+/***
+ * Tags + Tabs  - v1.0
+ * pmav.eu - 15/Mar/2006
+ **/
+
+
+
+/* ********************************* ********************************* *********************************
+ * MAIN
+ * ********************************* */
+
+body {
+ padding: 0px;
+ /*# FF & IE */ margin: 0px;
+}
+
+
+div#main {
+ padding: 10px 0px 10px 0px;
+ border-top: 2px solid #ffd52e;
+ border-bottom: 2px solid #ffd52e;
+ background: url("back.gif") #fffbe9;
+ /*# IE */ text-align: center; /* Centra a box de Tags */
+}
+
+
+p {
+ margin: 0px 0px 0px 0px;
+ padding: 0px 5px 0px 0px;
+ font: bold 11px Verdana;
+ text-align: right;
+ color: #cca300;
+}
+
+
+p a { color: #cca300; }
+
+
+
+
+/* ********************************* ********************************* *********************************
+ * TAGS
+ * ********************************* */
+
+div#main div#tags {
+ background-color: #fff2c0;
+ border: 1px solid #ffd52e;
+
+ padding: 5px 10px 10px 10px;
+ width: 350px;
+
+ line-height: 150%;
+ text-align: justify;
+
+ margin-left: auto; margin-right: auto; /* Centra a box de Tags (Opera + FF) */
+ /*# IE */ clear: both; /* Centra a box de Tags */
+}
+
+
+div#main div#tags a {
+ font: bold 13px Verdana;
+ text-decoration: none;
+ color: #cca300;
+ padding: 2px;
+}
+
+
+div#main  div#tags  .s1 {  }
+div#main  div#tags  .s2 { font-size: 120%; }
+div#main  div#tags  .s3 { font-size: 160%; }
+div#main  div#tags  .s4 { font-size: 180%; }
+div#main  div#tags  .s5 { font-size: 200%; }
+/*
+ * Igual mas não funciona em IE:
+ * div#main > div#tags > .s5 { font-size: 200%; } */
+
+
+
+
+/* ********************************* ********************************* *********************************
+ * TABS
+ * ********************************* */
+
+ul#tabnav {
+ padding: 0px 0px 23px 40px;
+ margin: 100px 0px 0px 0px;
+ /*# FF */ list-style-type: none;
+}
+
+
+ul#tabnav li {
+ float: left;
+ height: 21px;
+ margin: 0px 2px 0px 2px;
+ background-color: #ffd52e;
+ border: 1px solid #ffd52e;
+}
+
+
+ul#tabnav a:link, ul#tabnav a:visited {
+ font: bold 12px Verdana;
+ display: block;
+ color: #000000;
+ padding: 4px;
+ /*# FF & IE */ text-decoration: none; /* Opera: links com display: block; perdem text-decoration */
+}
+
+
+ul#tabnav a:hover {
+ background-color: #fffbe9;
+}

@@ -1,0 +1,155 @@
+/****
+ *  ooNFO (CSS) - http://pmav.eu/stuff/php-oonfo/
+ *  v2.0 - 24/Abr/2006
+ */
+
+body {
+ background-color: #FFFFFF;
+ text-align: center;
+ color: #000000;
+ padding: 0px;
+ margin: 0px;
+}
+
+
+
+/*************************************************************************************************
+ * INDEX #########################################################################################
+ ************************************************************************************************/
+
+div#i-header-out {
+ font: bold 56px/44px "Lucida Sans Unicode", sans-serif;
+ margin: 100px auto 0px auto;
+ text-align: left;
+ color: #E6EBFF;
+ width: 900px;
+}
+
+
+div#i-container {
+ background-color: #F7F7FF;
+ border: 1px solid #D9DEFF;
+ width: 900px;
+ margin: auto;
+}
+
+
+div#i-header-in {
+ font: bold 46px/30px "Lucida Sans Unicode", sans-serif;
+ margin: 30px auto 0px auto;
+ text-indent: 10px;
+ text-align: left;
+ color: #E6EBFF;
+ width: 800px;
+}
+
+
+div#i-body {
+ font: 24px "Verdana", sans-serif;
+ border-left: 5px solid #D9DEFF;
+ background-color: #E6EBFF;
+ text-align: left;
+ color: #AEB9FF;
+ padding: 10px;
+ margin: auto;
+ width: 800px;
+}
+
+
+div#i-body span {
+ font-weight: bold;
+ font-size: 10px;
+}
+
+
+div#i-body-error a {
+ font: 20px/32px "Verdana", sans-serif;
+ text-decoration: none;
+}
+
+
+div#i-body a {
+ border-bottom: 1px dotted #C9CCFF;
+ text-decoration: none;
+}
+
+
+div#i-body a:link,
+div#i-body a:visited,
+div#i-body a:active { color: #AEB9FF; }
+div#i-body a:hover { color: #5F94D9; }
+
+
+div#i-footer {
+ font: bold 13px "Lucida Sans Unicode", sans-serif;
+ text-align: right;
+ margin-top: 30px;
+ color: #AEB9FF;
+ width: 100%;
+}
+
+
+
+/*************************************************************************************************
+ * FILES #########################################################################################
+ ************************************************************************************************/
+
+div#f-header-out {
+ font: bold 56px/44px "Lucida Sans Unicode", sans-serif;
+ margin: 10px auto 0px auto;
+ text-align: left;
+ color: #E6EBFF;
+ width: 900px;
+}
+
+
+div#f-container {
+ background-color: #F7F7FF;
+ border: 1px solid #D9DEFF;
+ width: 900px;
+ margin: auto;
+}
+
+
+div#f-container pre {
+ font: 10px "Lucida Console", sans-serif;
+ border-left: 5px solid #D9DEFF;
+ background-color: #F7F7FF;
+ margin: 30px auto;
+ text-align: left;
+ overflow: auto;
+ color: #666666;
+ padding: 10px;
+ width: 800px;
+}
+
+
+div#f-info {
+ font: 14px "Lucida Sans Unicode", sans-serif;
+ text-align: right;
+ margin-top: 30px;
+ color: #AEB9FF;
+ width: 100%;
+}
+
+
+div#f-footer {
+ font: bold 13px "Lucida Console", sans-serif;
+ background-color: #AEB9FF;
+ margin: 20px auto 0px auto;
+ color: #E6EBFF;
+ padding: 5px;
+ width: 98%;
+}
+
+
+div#f-footer a {
+ border-bottom: 1px dotted #E6EBFF;
+ text-decoration: none;
+}
+
+
+div#f-footer a:link,
+div#f-footer a:visited,
+div#f-footer a:active { color: #E6EBFF; }
+div#f-footer a:hover { color: #5F94D9; }

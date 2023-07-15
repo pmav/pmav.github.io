@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Simple Auth with PHP</title>
+
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPhp.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+  </head>
+
+  <body style="color: black; font-family: 'Verdana', sans-serif;">
+    <h2>Simple Auth with PHP</h2>
+    <a href="." style="color: black;">Online Here</a>
+
+    <div style="width: 800px; margin: auto; font-size: 12px;">
+      <h2>Source (SimpleAuth.class.php)</h2>
+      <pre class="brush: php;" >
+&lt;?php
+
+/**
+ *Simple Auth Class
+ *
+ * http://pmav.eu/stuff/php-simple-auth/
+ *
+ * v1.0 - 14/Set/2009
+ */
+
+ class SimpleAuth {
+ 
+  private $password;
+
+
+  function __construct($password) {
+   $this-&gt;password = $password;
+  }
+
+
+  function isValid($key = 'key') {
+   return ($_GET[$key] === md5($this-&gt;password) || $_GET[$key] === $this-&gt;password);
+  }
+
+
+  function getSecret() {
+   return md5($this-&gt;password);
+  }
+
+ }
+
+?&gt;
+      </pre>
+
+      <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+      <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+  </body>
+</html>

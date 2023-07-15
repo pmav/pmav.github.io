@@ -1,0 +1,15 @@
+#d1, #d2 {
+ width: 300px;
+ line-height: 300px;
+ float: left;
+ margin: 0 10px 0 0;
+}
+
+div {
+ border: 2px solid black;
+ width: 220px;
+ text-align: center;
+ font-size: 42px;
+ background: #EEEEEE;
+ cursor: move;
+}

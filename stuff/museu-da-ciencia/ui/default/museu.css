@@ -1,0 +1,112 @@
+.slide { height: 100%; }
+
+.slide .box {
+ margin: 20px auto 0 auto;
+ height: 604px; /* + 28px Footer */
+ width: 842px;
+}
+
+/* ### COVER ################################################ */
+
+.logos {
+ background: url("../../images/logosmov.jpg") no-repeat;
+ line-height: 110px;
+ margin: 60px 0 0 0;
+}
+
+.header .logo-cover {
+ background: #001E3F url("../../images/header.png");
+ width: 600px;
+ float: left;
+}
+
+/* ### HEADER ################################################ */
+
+.header { line-height: 197px;  }
+
+.header .logo {
+ width: 300px;
+ float: left;
+}
+
+.header .pic {
+ width: 300px;
+ float: left;
+}
+
+.header .color {
+ float: right;
+ width: 224px;
+}
+
+.header .color .bar {
+ height: 197px;
+ width: 28px;
+ float: left;
+}
+
+.header .color .bar-s {
+ font: bold 36px "MorganSnLining", "Calibri", sans-serif;
+ padding: 10px 0 0 0;
+ text-align: center;
+ color:  #FFFFFF;
+ height: 187px;
+ float: left;
+ width: 56px;
+}
+
+.header .sep {
+ line-height: 0;
+ clear: both;
+}
+
+.c00 { background: #001E3F; }
+
+.c01 { background: #702964; }
+.c02 { background: #005393; }
+.c03 { background: #129DBC; }
+.c04 { background: #73AA35; }
+.c05 { background: #BEA723; }
+.c06 { background: #F96715; }
+.c07 { background: #CF1D30; }
+
+.l01 { background: url("../../images/logos/logo01.png"); }
+.l02 { background: url("../../images/logos/logo02.png"); }
+.l03 { background: url("../../images/logos/logo03.png"); }
+.l04 { background: url("../../images/logos/logo04.png"); }
+.l05 { background: url("../../images/logos/logo05.png"); }
+.l06 { background: url("../../images/logos/logo06.png"); }
+.l07 { background: url("../../images/logos/logo07.png"); }
+
+.p01 { background: url("../../images/photos/img01.jpg"); }
+.p02 { background: url("../../images/photos/img02.jpg"); }
+.p03 { background: url("../../images/photos/img03.jpg"); }
+.p04 { background: url("../../images/photos/img04.jpg"); }
+.p05 { background: url("../../images/photos/img05.jpg"); }
+.p06 { background: url("../../images/photos/img06.jpg"); }
+.p07 { background: url("../../images/photos/img07.jpg"); }
+
+
+/* ### CONTENT ################################################ */
+
+.text {
+ font: 16px/22px "Calibri", sans-serif;
+ margin: 60px 0 60px 300px;
+ text-align: justify;
+ letter-spacing: 1px;
+ color: #000000;
+}
+
+.text em {
+ letter-spacing: 0;
+}
+
+/* ### FOOTER ################################################ */
+
+.footer {
+ background: #001E3F url("../../images/footer.png") no-repeat;
+ padding: 0 0 4px 0;
+ margin: auto;
+ height: 28px;
+ width: 842px;
+}

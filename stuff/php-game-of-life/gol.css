@@ -1,0 +1,35 @@
+a:link, a:hover, a:visited, a:active { 
+ color: #000000 }
+
+body {
+color: #000000; }
+
+span {
+ font-family: Verdana; font-size: 10; }
+
+.title {
+ font-family: Fixedsys; text-align: center; font-size: 35px; }
+
+.main {
+ border-collapse: collapse; border: 1px solid #000000; width: 150px; margin-right: auto; margin-left: auto; }
+
+.grid {
+ border-collapse: collapse; border: 1px solid #000000; }
+
+.live {
+ border: 1px solid #000000; background: #000000; }
+
+.dead {
+ border: 1px solid #000000; }
+
+.gen {
+ font-family: Fixedsys; }
+
+.form {
+ font-family: Verdana; font-size: 11px; background-color: #E0DDDD; border: 1px solid #333333; }
+
+.cell {
+ border: 1px solid #000000; padding: 0.4em; }
+
+.cell-text {
+ font-family: Verdana; font-weight: bold; font-size: 11px; color: #000000; border: 1px solid #000000; padding: 0.4em; }

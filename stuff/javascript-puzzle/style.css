@@ -1,0 +1,17 @@
+.p {
+ line-height: 150px;
+ width: 150px;
+ float: left;
+}
+
+.i {
+ line-height: 150px;
+ width: 150px;
+ position: absolute;
+ cursor: move;
+}
+
+button {
+ font: 32px "Verdana";
+ padding: 4px;
+}

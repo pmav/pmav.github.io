@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+
+  <script type="text/javascript">
+  var init = 200;
+  var end = 255;
+  function main(i, j) {
+   document.body.style.background = "rgb("+i+","+i+","+i+")";
+   document.getElementById("main").style.color = "rgb("+(255-i)+","+(255-i)+","+(255-i)+")";
+   i = j == 0 ? i+1 : i-1;
+   if (i == end+1) j = 1
+   if (i == init-1) j = 0
+   setTimeout("main("+i+", "+j+")", 50);
+  }
+  </script>
+
+  <style type="text/css">
+   div#title {
+    border-bottom: 5px solid black;
+    padding: 0px 14px;
+    margin: 10px auto;
+    width: 600px;
+    font: bold small-caps 60px/46px sans-serif;
+    letter-spacing: -6px;
+    color: #000000;
+   }
+
+   div#main {
+    border: 4px solid black;
+    background: lightblue;
+    padding: 10px;
+    margin: auto;
+    width: 600px;
+    font: 20px "Lucida Sans Unicode", serif;
+    text-align: justify;
+    color: #000000;
+   }
+  </style>
+
+  <title>Background JS Test</title>
+ </head>
+ 
+ <body id="b" onload="main(init, 0);">
+  <div id="title">Background Test</div>
+  <div id="main">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In mi leo, fermentum a, blandit ut, fermentum non, eros. Sed sit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec vel nisi. Maecenas ullamcorper adipiscing quam. Proin a magna nec ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin cursus rhoncus libero. Mauris non nibh a ipsum vestibulum tristique. Maecenas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In mi leo, fermentum a, blandit ut, fermentum non, eros. Sed sit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec vel nisi. Maecenas ullamcorper adipiscing quam. Proin a magna nec ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin cursus rhoncus libero. Mauris non nibh a ipsum vestibulum tristique. Maecenas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In mi leo, fermentum a, blandit ut, fermentum non, eros. Sed sit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec vel nisi. Maecenas ullamcorper adipiscing quam. Proin a magna nec ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin cursus rhoncus libero. Mauris non nibh a ipsum vestibulum tristique. Maecenas.</div>
+
+  <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+ </body>
+</html>

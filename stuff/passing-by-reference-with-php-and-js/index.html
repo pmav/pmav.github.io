@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Passing by Reference with PHP and Javascript</title>
+
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPhp.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <h1>Passing by Reference with PHP and Javascript</h1>
+
+      <p>PHP (<a href="test-php.php">test</a>)</p>
+
+      <pre class="brush: php;">
+&lt;?php
+
+  function test(&$b) { // Passing by reference
+   $b = array(4,5,6); // New Array
+  }
+
+  $a = array(1,2,3);
+
+  print_r($a); // 1, 2, 3
+  test($a);
+  print_r($a); // 4, 5, 6
+
+?>
+      </pre>
+
+      <hr />
+
+      <p>Javascript (<a href="test-js.html">test</a>)</p>
+
+      <pre class="brush: jscript;">
+(function() {
+
+  function test1(b) { // Passing by reference
+   b = [4, 5, 6];
+  }
+
+  function test2(b) {
+   b.push(4);
+  }
+
+  var a = [1, 2, 3]; 
+
+  alert(a); // 1, 2, 3
+  test1(a);
+  alert(a); // 1, 2, 3
+  test2(a);
+  alert(a); // 1, 2, 3, 4
+
+})();
+      </pre>
+
+      <hr />
+
+      <p>Passing by Reference with PHP and Javascript - <a href="http://pmav.eu">pmav.eu</a> 2009</p>
+
+    </div>
+
+    <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+  </body>
+</html>

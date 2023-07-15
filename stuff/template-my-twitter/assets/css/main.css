@@ -1,0 +1,341 @@
+/**
+ * Template My Twitter
+ * pmav, 2009
+ * http://pmav.eu
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none;
+}
+
+#page-wrap {
+  background: white;
+  min-width: 600px;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+#page-wrap #inside {
+  margin: 10px 10px 0px 10px;
+  padding-bottom: 10px;
+}
+
+#main-content {
+  padding-left: 230px;
+}
+
+#left-sidebar {
+  width: 200px;
+  float: left;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
+/* ############################################ */
+
+form input, form textarea {
+  font-family: "Arial", sans-serif;
+  border-top: 1px solid #aaccee;
+  border-right: 1px solid #aaccee;
+  border-bottom: 1px solid #4d9de4;
+  border-left: 1px solid #4d9de4;
+  font-size: 16px;
+  background: #f7fbff;
+  color: #000000;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+form fieldset {
+  border: 1px solid #aaccee;
+  padding: 6px 8px 2px 8px;
+  margin: 10px 10px 10px 0;
+}
+
+form fieldset.float {
+  float: left;
+}
+
+form input.submit {
+  padding: 2px;
+  font-size: 14px;
+  border-width: 1px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+form input.submit:hover {
+  cursor: pointer;
+  border-color: #FFFFFF;
+}
+
+form input.xl {
+  font-size: 16px;
+}
+
+/* ############################################ */
+
+#notice {
+  margin-bottom: 20px;
+  margin-top: 4px;
+  font-size: 20px;
+  padding: 4px;
+}
+
+#notice.success {
+  border-bottom: 3px solid #008000;
+  border-top: 3px solid #008000;
+  background-color: #BDE4AA;
+}
+
+#notice.warning {
+  border-bottom: 2px solid #E2E91E;
+  border-top: 2px solid #E2E91E;
+  background: #F4F7A8;
+}
+
+#notice.failure {
+  border-bottom: 3px solid #FD1C08;
+  border-top: 3px solid #FD1C08;
+  background: #FC7165;
+}
+
+/* ############################################ */
+
+body {
+  font-family: "Tahoma", sans-serif;
+  color: #000000;
+}
+
+h3 {
+  margin: 0 0 4px 0;
+}
+
+hr {
+  margin: 20px 0;
+  border-width: 0;
+  border-top: 1px solid #aaccee;
+}
+
+li {
+  list-style: none;
+}
+
+#header {
+  font: bold 42px "Arial", sans-serif;
+  letter-spacing: -2px;
+}
+
+#header a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#left-sidebar {
+  background: #e9f4ff;
+}
+
+#left-sidebar a {
+  color: #000000;
+}
+
+#left-sidebar a:hover {
+  color: #4d9de4;
+}
+
+#left-sidebar input.text {
+  width: 94%;
+}
+
+#left-sidebar div {
+  border-bottom: 1px solid #aaccee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+#left-sidebar div span {
+  font-size: 12px;
+}
+
+#left-sidebar div h5 {
+  margin-bottom: 4px;
+}
+
+#left-sidebar ul li {
+  padding: 2px 0;
+}
+
+#left-sidebar ul li:before {
+  content: ". ";
+}
+
+#left-sidebar ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#left-sidebar ul li a:hover {
+  color: #4d9de4;
+}
+
+#left-sidebar p {
+  font-size: 10px;
+}
+
+#main-content {
+
+}
+
+/* ############################################ */
+
+#send-tweet {
+  margin-bottom: 20px;
+}
+
+#send-tweet h2 {
+  margin-bottom: 10px;
+}
+
+#send-tweet textarea {
+  width: 98.2%;
+  height: 40px;
+}
+
+/* ############################################ */
+
+#tweet-list {
+  font-size: 14px;
+}
+
+#tweet-list .tweet {
+  border-top: 1px solid #aaccee;
+  margin-bottom: 26px;
+  line-height: 20px;
+}
+
+#tweet-list .tweet .user {
+  font-weight: bold;
+}
+
+#tweet-list .tweet .user:after {
+  content: " :";
+}
+
+#tweet-list .tweet .text {
+
+}
+
+#tweet-list .tweet .date {
+  font-size: 11px;
+  color: #1683e4;
+  cursor: help;
+}
+
+/* ############################################ */
+
+#user-list {
+  font-size: 14px;
+}
+
+#user-list .user {
+  border-top: 1px solid #aaccee;
+  margin-top: 23px;
+  line-height: 20px;
+}
+
+#user-list .user a {
+  color: #000;
+}
+
+#user-list .user a:hover {
+  color: #4d9de4;
+}
+
+#user-list .user .note {
+  color: #AAA;
+}
+
+
+#user-list .user .actions {
+  float: right;
+}
+
+/* ############################################ */
+
+#signupnow {
+  cursor: pointer;
+  color: #4d9de4;
+}
+
+#signupnow span  {
+  text-decoration: underline;
+}
+
+#adminzone a {
+  color: #4d9de4;
+}
+
+/* ############################################ */
+
+#pagging {
+  text-align: center;
+}
+
+#pagging a {
+  color: #000;
+}
+
+#pagging a:after {
+}
+
+#pagging a:hover {
+  color: #4d9de4;
+}
+
+/* ############################################ */
+
+#user-info {
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+#user-info h2 {
+  border-bottom: 1px solid #aaccee;
+  padding: 0 0 23px 0;
+}
+
+#user-info a {
+  line-height: 20px;
+  color: #000;
+}
+
+#user-info a:hover {
+  color: #4d9de4;
+}
+
+/* ############################################ */
+
+#text {
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+#text h2 {
+  border-bottom: 1px solid #aaccee;
+  padding: 0 0 23px 0;
+}
+
+#text a {
+  line-height: 20px;
+  color: #000;
+}
+
+#text a:hover {
+  color: #4d9de4;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Windows Uptime with PHP</title>
+
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPhp.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+  </head>
+
+  <body style="color: black; font-family: 'Verdana', sans-serif;">
+    <h2>Windows Uptime with PHP</h2>
+    <a href="." style="color: black;">Online Here</a>
+
+    <div style="width: 800px; margin: auto; font-size: 12px;">
+      <h2>Source (WindowsUptime.class.php)</h2>
+      <pre class="brush: php;" >
+&lt;?php
+
+/**
+ * Windows Uptime Class
+ *
+ * http://pmav.eu/stuff/php-windows-uptime/
+ *
+ * v1.0 - 17/Oct/2008
+ * v1.1 - 10/Sep/2009
+ */
+
+class WindowsUptime {
+
+  const DEFAULT_FILE = 'c:\pagefile.sys';
+  const DEFAULT_DATE_FORMAT = 'd/M/Y @ H:i';
+  const RAW_OUTPUT = true;
+
+  private $file;
+
+
+  function __construct($file = self::DEFAULT_FILE) {
+    $this-&gt;file = $file;
+  }
+
+
+  public function uptime($rawOutput = false) {
+    $uptime = (time() - filemtime($this-&gt;file));
+
+    if (!$rawOutput) {
+      $days = floor($uptime / (24 * 3600));
+      $uptime = $uptime - ($days * (24 * 3600));
+      $hours = floor($uptime / (3600));
+      $uptime = $uptime - ($hours * (3600));
+      $minutes = floor($uptime / (60));
+      $uptime = $uptime - ($minutes * 60);
+      $seconds = $uptime;
+
+      $days = $days.' day'.($days != 1 ? 's' : '');
+      $hours = $hours.' hour'.($hours != 1 ? 's' : '');
+      $minutes = $minutes.' minute'.($minutes != 1 ? 's' : '');
+      $seconds = $seconds.' second'.($seconds != 1 ? 's' : '');
+
+      $uptime = $days.' '.$hours.' '.$minutes.' '.$seconds;
+    }
+
+    return $uptime;
+  }
+
+
+  public function upSince($dateFormat = self::DEFAULT_DATE_FORMAT) {
+    return date($dateFormat, filemtime($this-&gt;file));
+  }
+
+
+  public function getFile() {
+    return $this-&gt;file;
+  }
+
+
+  public function setFile($file) {
+    $this-&gt;file = $file;
+  }
+
+}
+
+?&gt;
+      </pre>
+
+      <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+      <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+  </body>
+</html>

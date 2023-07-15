@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>QUnit Test Suite</title>
+	<link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src="qunit/qunit.js"></script>
+	<script type="text/javascript" src="simple-i18n.js"></script>
+	<script>
+
+		module("i18n Module", {
+			setup: function() {
+
+				var data1 =
+				[
+					['pt', 'resourceText', function() { return 'Recursos'; }],
+					['en', 'resourceText', function() { return 'Resources'; }],
+					['pt', 'resourceText1', function() { return 'Recursos'; }],
+					['en', 'resourceText1', function() { return 'Resources'; }]
+				];
+
+				var data2 =
+				[
+					['pt', 'resourceText', function() { return 'Recursos 2'; }],
+					['en', 'resourceText', function() { return 'Resources 2'; }],
+					['pt', 'resourceText2', function() { return 'Recursos 2'; }],
+					['en', 'resourceText2', function() { return 'Resources 2'; }]
+				];
+				
+				var data3 =
+				[
+					['pt', 'resourceText', function(n) { return n + ' Recursos'; }],
+					['en', 'resourceText', function(n) { return n + ' Resources'; }]
+				];
+
+				i18n1 = i18nFactory(data1);
+				i18n2 = i18nFactory(data2);
+				i18n3 = i18nFactory(data3);
+			}
+		});
+
+		test("Get Languages", function() {
+			var value = i18n1.getLanguages();
+			deepEqual(value, ['pt', 'en']);
+		});
+
+		test("Get Languages", function() {
+			var value = i18n2.getLanguages();
+			deepEqual(value, ['pt', 'en']);
+		});
+
+		test("Get Languages", function() {
+			var value = i18n3.getLanguages();
+			deepEqual(value, ['pt', 'en']);
+		});
+
+		// ***
+
+		test("Call Template resourceText", function() {
+			var value = i18n1.get('pt').resourceText();
+			equals(value, 'Recursos');
+		});
+
+		test("Call Template resourceText", function() {
+			var value = i18n1.get('en').resourceText();
+			equals(value, 'Resources');
+		});
+
+		test("Call Template resourceText", function() {
+			var value = i18n2.get('pt').resourceText();
+			equals(value, 'Recursos 2');
+		});
+
+		test("Call Template resourceText", function() {
+			var value = i18n2.get('en').resourceText();
+			equals(value, 'Resources 2');
+		});
+
+		// ***
+
+		test("Call Template resourceText1", function() {
+			var value = i18n1.get('pt').resourceText1();
+			equals(value, 'Recursos');
+		});
+
+		test("Call Template resourceText1", function() {
+			var value = i18n1.get('en').resourceText1();
+			equals(value, 'Resources');
+		});
+
+		test("Call Template resourceText2", function() {
+			var value = i18n2.get('pt').resourceText2();
+			equals(value, 'Recursos 2');
+		});
+
+		test("Call Template resourceText2", function() {
+			var value = i18n2.get('en').resourceText2();
+			equals(value, 'Resources 2');
+		});
+
+		// ***
+
+		test("Call Template with Arguments", function() {
+			var n = 99;
+			var value = i18n3.get('pt').resourceText(n);
+			equals(value, '99 Recursos');
+		});
+
+		test("Call Template with Arguments", function() {
+			var n = 99;
+			var value = i18n3.get('en').resourceText(n);
+			equals(value, '99 Resources');
+		});
+
+		// ***
+
+		test("Call Undefined Template", function() {
+			try {
+				i18n1.get('pt').resourceText2();
+				ok(false);
+			} catch(error) {
+				ok(true);
+			}
+		});
+
+		test("Call Undefined Template", function() {
+			try {
+				i18n1.get('en').resourceText2();
+				ok(false);
+			} catch(error) {
+				ok(true);
+			}
+		});
+
+		test("Call Undefined Template", function() {
+			try {
+				i18n2.get('pt').resourceText1();
+				ok(false);
+			} catch(error) {
+				ok(true);
+			}
+		});
+
+		test("Call Undefined Template", function() {
+			try {
+				i18n2.get('en').resourceText1();
+				ok(false);
+			} catch(error) {
+				ok(true);
+			}
+		});
+
+	</script>
+</head>
+<body>
+	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">test markup</div>
+</body>
+</html>

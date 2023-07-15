@@ -1,0 +1,16 @@
+body { background: #666666; }
+
+div#box {
+ font: small-caps 12px "Verdana";
+ background: #008C00;
+ text-align: justify;
+ color: #000000;
+ width: 200px;
+}
+
+/*       background: <img> <pos x> <pos y> <repeat>; */
+
+div.bl { background: url("img/bl.gif") 0%   100% no-repeat; }
+div.br { background: url("img/br.gif") 100% 100% no-repeat; }
+div.tl { background: url("img/tl.gif") 0%   0%   no-repeat; }
+div.tr { background: url("img/tr.gif") 100% 0%   no-repeat; padding: 15px; }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <script>
+   (function() {
+
+     function test1(b) { // Passing by reference
+      b = [4, 5, 6];
+     }
+
+     function test2(b) {
+      b.push(4);
+     }
+
+     var a = [1, 2, 3]; 
+
+     alert(a); // 1, 2, 3
+
+     test1(a);
+
+     alert(a); // 1, 2, 3
+
+     test2(a);
+
+     alert(a); // 1, 2, 3, 4
+   })();
+  </script>
+
+  <title></title>
+ </head>
+ <body>
+
+ </body>
+</html>

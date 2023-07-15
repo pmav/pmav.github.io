@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Javascript Simple Internationalization</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Simple internationalization library in Javascript." />
+        <meta name="keywords" content="javascript, simple, internationalization, i18n" />
+        <meta name="author" content="pmav" />
+
+        <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+
+        <script type="text/javascript" src="assets/syntaxhighlighter/scripts/shCore.js"></script>
+        <script type="text/javascript" src="assets/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="assets/syntaxhighlighter/styles/shCore.css">
+        <link type="text/css" rel="stylesheet" href="assets/syntaxhighlighter/styles/shThemeDefault.css">
+        <script type="text/javascript">
+            SyntaxHighlighter.config.clipboardSwf = 'assets/syntaxhighlighter/scripts/clipboard.swf';
+            SyntaxHighlighter.all();
+        </script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <div id="header">
+                <h1>Javascript Simple Internationalization</h1>
+            </div>
+
+            <div id="main">
+
+                <div class="entry">
+
+                    <div class="info">
+                        <h2>Source Code</h2>
+
+                        Download: <a href="files/simple-i18n.js" title="simple-i18n.js">simple-i18n.js</a> (save as)
+                    </div>
+
+                    <pre class="brush: jscript;">/**
+ * Javascript Simple Internationalization
+ *
+ * http://pmav.eu/stuff/javascript-simple-internationalization
+ * pmav, 2011
+ */
+ 
+var i18nFactory = function(data) {
+
+	// Attributes.
+
+	var cache = {};
+	
+	var languages = new Array();
+
+	// Constructor.
+
+	for (var i = 0; i < data.length; i++)
+	{
+		var languageID = data[i][0];
+
+		if (cache[languageID] == undefined)
+		{
+			cache[languageID] = {};
+			
+			languages[languages.length] = languageID;
+		}
+
+		cache[languageID][data[i][1]] = data[i][2];
+	}
+	
+	// Public API.
+
+	return {
+		get : function(languageID)
+		{
+			return cache[languageID];
+		},
+		
+		getLanguages : function()
+		{
+			return languages;
+		}
+	};
+};
+</pre>
+                </div>
+
+            </div>
+            <div id="footer">Javascript Simple Internationalization | <a href="http://pmav.eu">pmav.eu</a> | 12/Feb/2012 | <a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a> | This work is licensed under a <a rel="license" href="../assets/LICENSE">MIT License</a>.</div>
+        </div>
+
+        <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+    </body>
+</html>

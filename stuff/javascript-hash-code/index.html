@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Javascript HashCode Function</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="An implementation of a HashCode() function in Javascript." />
+        <meta name="keywords" content="javascript, hash, hashcode, md5" />
+        <meta name="author" content="pmav" />
+
+        <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <div id="header">
+                <h1>Javascript HashCode Function</h1>
+            </div>
+
+            <div id="main">
+
+                <div class="box">
+                    <p>
+                        This function returns a hash code (MD5) based on the argument object. <span class="alert">Please note that this implementation have some limitations</span> (or features):
+                    <ul>
+                        <li>Two instances of the same "Class" with the same internal state return the same hash code, i.e. they are equal:
+                            <pre>HashCode.value(new Object(arg)) === HashCode.value(new Object(arg)) // is True
+
+// but...
+
+function MyClass(value) {
+    this.value = value;
+}
+
+c1 = new MyClass(99);
+c2 = new MyClass(99);
+
+HashCode.value(c1) === HashCode.value(c2); // is True
+c1 === c2; // is False</pre>
+
+                        </li>
+                        <li><code>1</code> and <code>1.0</code> return the same code.</li>
+                        <li><code>x143</code> and <code>99</code> return the same code.</li>
+                    </ul>
+
+                    For the hash code generation this script search for object types, names and values.<br /><br />
+
+                    Powered by the <a href="http://www.webtoolkit.info/javascript-md5.html">Webtoolkit MD5 library</a>.
+                    </p>
+
+                    <div class="text">
+                        <h4>How to use it</h4>
+                        <p>The following code shows how to use the <code>HashCode.value()</code> function.</p>
+
+                        <pre>var object1 = [];
+var object2 = { f1 : function() { var i; }, a : [1, 2, "#", { m : function() { return 1; } }]};
+var object3 = object2;
+var object4 = function(arg) { arg++ };
+var object5 = function(arg) { arg++ }(2);
+var object6 = (function(arg) { arg++ })(2);
+
+HashCode.value(object1); // result: d41d8cd98f00b204e9800998ecf8427e
+HashCode.value(object2); // result: e72b9ba8d4c160ab0d1b2a828359dde1
+HashCode.value(object3); // result: e72b9ba8d4c160ab0d1b2a828359dde1
+HashCode.value(object4); // result: 16619c0e50afd2695fc1a22dab652395
+HashCode.value(object5); // result: be36fcbc3ab6342a7cbcb2e37d2ae78f
+HashCode.value(object6); // result: be36fcbc3ab6342a7cbcb2e37d2ae78f</pre>
+
+                    </div>
+
+                    <div class="text-end">
+                        <h4>Source code and examples</h4>
+                        <p>All the source code and examples are online <a href="source/">here</a>.</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div id="footer">Javascript HashCode Function | <a href="http://pmav.eu">pmav.eu</a> | 23/Jan/2010 | <a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01 Strict</a> | This work is licensed under a <a rel="license" href="assets/LICENSE">MIT License</a>.</div>
+        </div>
+
+        <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Javascript Simple Internationalization</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Simple internationalization library in Javascript." />
+        <meta name="keywords" content="javascript, simple, internationalization, i18n" />
+        <meta name="author" content="pmav" />
+
+        <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <div id="header">
+                <h1>Javascript Simple Internationalization</h1>
+            </div>
+
+            <div id="main">
+
+                <div class="box">
+
+                    <!-- Intro -->
+
+                    <p>This is a simple Javascript library that provides internationalization functions.</p>
+
+                </div>
+
+                <!-- Groups -->
+
+                <div  class="box">
+                    <h2>How to use it</h2>
+                    <p>The following code shows how to use this library.</p>
+					
+					<p>&nbsp;</p>
+					
+					<p>1) Include it in your HTML page.</p>
+					<pre>&lt;script src="simple-i18n.js"&gt;&lt;/script&gt;</pre>
+
+					<p>2) Define templates.</p>
+					<pre>var data =
+[
+     // [&lt;Language&gt;, &lt;Template Name&gt;, &lt;Function to Execute&gt;]
+	['pt', 'resourceText', function(n) { return n + ' Recursos'; }],
+	['en', 'resourceText', function(n) { return n + ' Resources'; }],
+	['pt', 'name', function(name) { return 'O meu nome é ' + name; }],
+	['en', 'name', function(name) { return 'My name is '+ name; }]
+];</pre>
+					
+					<p>3) Create i18n instance and call templates.</p>
+					<pre>var i18nInstance = i18nFactory(data);
+					
+var value = i18nInstance.get('pt').resourceText();
+var value = i18nInstance.get('en').resourceText();
+var value = i18nInstance.get('pt').name('John');
+var value = i18nInstance.get('en').name('John');</pre>
+                </div>
+
+                <!-- Source -->
+
+                <div class="box">
+                    <h2>Source code and examples</h2>
+                    <p>The the source code is online <a href="source/" title="Source Code">here</a>.</p>
+					<p>Qunit tests are online <a href="tests/" title="Qunit Tests">here</a>.
+                </div>
+
+
+            </div>
+            <div id="footer">Javascript Simple Internationalization | <a href="http://pmav.eu">pmav.eu</a> | 12/Feb/2012 | <a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a> | This work is licensed under a <a rel="license" href="assets/LICENSE">MIT License</a>.</div>
+        </div>
+
+        <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+    </body>
+</html>

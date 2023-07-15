@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+
+    <script>
+      /**
+       * js-numero-do-bilhete-de-identidade
+       * v1.0.1 - 25/Abr/2009
+       * http://pmav.eu
+       */
+
+      function divide(numerator, denominator) {
+        return (numerator - (numerator % denominator)) / denominator;
+      }
+
+      function validate() {
+        var i, total = 0,
+            number = parseInt(document.getElementById('number').value, 10),
+            message = document.getElementById('message');
+
+            if (isNaN(number)) {
+             message.innerHTML = 'Introduziu um Número de BI inválido.';
+             return;
+            }
+
+            number = number.toString();
+
+            if (number.length < 7 || number.length > 8) {
+              message.innerHTML = 'Introduziu um Número de BI inválido.';
+              return;
+            }
+
+            for(i = number.length - 1, w = 2; i >= 0; i-- ) {
+              total = total + (number[i] * ((number.length + 1) - i));
+            }
+
+            total = ((divide(total, 11) + 1) * 11) - total;
+
+            if (total === 10) {
+              message.innerHTML =  'O dígito de controlo (<code>0</code>) está errado! Deveria ser <code>10</code>.'
+            } else {
+              message.innerHTML = 'O dígito de controlo (<code>'+(total === 11 ? '0' : total)+'</code>) está correcto!';
+            }
+
+      }
+    </script>
+  
+    <style type="text/css">
+      body {
+         font-family: 'Georgia', serif;
+         color: #000000;
+      }
+
+      a {
+        border-bottom: 1px solid #AAAAAA;
+        text-decoration: none;
+        padding: 0 0 1px 0;
+        color: #000000;
+      }
+
+      a:hover {
+        background: #AAAAAA;
+      }
+
+      #wrapper {
+        margin: auto;
+        width: 880px;
+      }
+
+      #title {
+        border-bottom: 2px solid #000000;
+        margin: 20px 0;
+      }
+
+      #title h1 {
+        margin: 0;
+      }
+
+      #info {
+        margin: 0 0 40px 0;
+        line-height: 22px;
+        font-size: 16px;
+      }
+
+      #app {
+        border-top: 1px dotted #CCCCCC;
+        padding-top: 10px;
+      }
+
+      #app .l {
+        float: left;
+      }
+
+      #app .r {
+        float: left;
+        margin: 0 0 0 10px;
+      }
+
+      #app .cl {
+        line-height: 0;
+        clear: left;
+      }
+
+      #app form p {
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+
+      #app form input {
+        font-size: 32px;
+      }
+
+      #app form input.number {
+        border: 1px solid #CCCCCC;
+        background: #F5F5F5;
+        padding: 2px 4px 0;
+        color: #000;
+      }
+
+      #app form input.number {
+        text-align: right;
+        width: 150px;
+      }
+
+      #app form input.submit {
+        border-bottom: 1px solid #222222;
+        border-right: 1px solid #222222;
+        border-top: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+        background: #FFFFFF;
+        padding: 2px 4px 0;
+      }
+
+      #app form input.submit:hover {
+        border-bottom: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-top: 1px solid #222222;
+        border-left: 1px solid #222222;
+        cursor: pointer;
+      }
+
+      #app #message {
+        margin: 0 0 0 10px;
+        font-size: 20px;
+      }
+
+      #footer {
+        border-top: 2px solid #000000;
+        margin: 40px 0 0 0;
+        line-height: 20px;
+        font-size: 14px;
+      }
+    </style>
+
+    <title>O seu número do BI está correcto?</title>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="title">
+        <h1>O seu número do BI está correcto?</h1>
+      </div>
+
+      <div id="info">
+        <p>Provavelmente está, mas o dígito na caixa ao lado pode estar errado. Caso tenha curiosidade em saber se é o seu caso pode usar o formulário abaixo.</p>
+        <p>Mais informação sobre o dígito de controlo utilizado no BI e o erro de implementação: <a href="http://www.atractor.pt/mat/alg_controlo/bi/BI_texto.htm">http://www.atractor.pt/.../BI_texto</a>.</p>
+        <p>A ideia para colocar online esta pequena ferramenta surgiu após a leitura do livro <a href="http://www.gradiva.pt/index.php?q=C/BOOKSSHOW/755">O Mistério do Bilhete de Identidade e Outras Histórias</a> de <a href="http://ptmat.fc.ul.pt/~jbuescu/">Jorge Buescu</a>.</p>
+        <p>
+          Explicação rápida: o dígito que se encontra isolado ao lado do número do BI é um número que permite saber se este está correcto quando, por exemplo, é passado de um sistema informático para outro. Assim é possível evitar alguns erros simples como a troca de dígitos.<br />
+          Este número de controlo deveria variar entre <code>0</code> e <code>10</code>, no entanto apenas vai até <code>9</code>, passando os <code>10</code> a <code>0</code>, assim, alguns cartões têm um <code>0</code> falso que não se destingue do verdadeiro. O <a href="http://pt.wikipedia.org/wiki/International_Standard_Book_Number">ISBN</a> usa o mesmo esquema mas optaram por marcar o <code>10</code> com um <code>X</code>.
+        </p>
+      </div>
+
+      <div id="app">
+        <form>
+
+          <p>Número do BI</p>
+          <div class="l">
+            <input id="number" class="number" type="text" maxlength="8" />
+          </div>
+
+          <div class="r">
+            <input class="submit" type="button" value="Verificar" onclick="validate();" /> <span id="message"></span>
+          </div>
+
+          <div class="cl">&nbsp;</div>
+         
+        </form>
+      </div>
+
+      <div id="footer">
+        <a href="http://pmav.eu">pmav</a> 2009 - Os dados introduzidos nesta página não serão guardados.
+      </div>
+
+    </div> <!-- wrapper -->
+
+   <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+   <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+  </body>
+</html>

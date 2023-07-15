@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Pictar v1.1</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Pictar - simple text avatars"/>
+    <meta name="keywords" content="pictar, avatar, image"/>
+    <meta name="author" content="pmav"/>
+
+    <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Pictar -->
+
+    <script src="pictar-assets/webfont.js"></script>
+
+    <link href="pictar-assets/spectrum/spectrum.css" rel="stylesheet"/>
+    <link href="pictar-assets/jquery-ui/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+
+    <script src="pictar-assets/jquery-2.1.3.min.js"></script>
+
+    <script src="pictar-assets/pictar.js"></script>
+    <script src="pictar-assets/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="pictar-assets/spectrum/spectrum.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="header">
+        <h1><a href=".">Pictar v1.1</a></h1>
+    </div>
+
+    <div id="main">
+
+        <div class="box">
+            <h2>What is?</h2>
+
+            <p>Pictar is an avatar generator. Using only text and colors you can create an image that identifies
+                something.</p>
+
+            <p><br>The following form changes the image in real time. To save it: <code>right click > save as</code>.
+                The images generate by this tool are yours. The tool is MIT licensed.</p>
+
+            <p><br>Powered by <a href="http://bgrins.github.com/spectrum/">Spectrum</a>, <a
+                    href="http://www.google.com/fonts/">Google Web Fonts</a>, <a href="http://jqueryui.com/">jQuery
+                    UI</a> and <a href="https://github.com/typekit/webfontloader">Web Font Loader</a>.</p>
+        </div>
+
+        <div class="box">
+
+            <div style="text-align: center">
+                <img id="export-image" />
+            </div>
+
+            <canvas id="avatar" width="256" height="256" style="display:none"></canvas>
+
+            <form>
+
+                <div style="float: left;">
+
+                    <fieldset>
+                        <legend>Text</legend>
+                        <textarea id="text" class="input" rows="2" cols="40">PV</textarea>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>Font</legend>
+
+                        <p>
+                            Size
+                            <div id="size-slider" style="width: 200px"></div>
+                            <br>
+                        </p>
+
+                        <select id="font-select">
+                            <option value="sans-serif">sans-serif</option>
+                            <option value="serif">serif</option>
+                            <option value="monospace">monospace</option>
+                            <option value="cursive">cursive</option>
+
+                            <optgroup label="Google Web Fonts">
+
+                                <optgroup label="Serif">
+                                    <option value="Droid Serif">Droid Serif</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Lora">Lora</option>
+                                    <option value="Rokkitt">Rokkitt</option>
+                                    <option value="PT Serif">PT Serif</option>
+                                </optgroup>
+
+                                <optgroup label="Sans-serif">
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="Oswald">Oswald</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="PT Sans">PT Sans</option>
+                                </optgroup>
+
+                                <optgroup label="Display">
+                                    <option value="Lobster">Lobster</option>
+                                    <option value="Unkempt">Unkempt</option>
+                                    <option value="Special Elite">Special Elite</option>
+                                    <option value="Changa One">Changa One</option>
+                                    <option value="Chewy">Chewy</option>
+                                </optgroup>
+
+                                <optgroup label="Handwriting">
+                                    <option value="The Girl Next Door">The Girl Next Door</option>
+                                    <option value="Shadows Into Light">Shadows Into Light</option>
+                                    <option value="Coming Soon">Coming Soon</option>
+                                    <option value="Dancing Script">Dancing Script</option>
+                                    <option value="Crafty Girls">Crafty Girls</option>
+                                </optgroup>
+
+                            </optgroup>
+
+                            <optgroup label="Windows">
+                                <option value="Arial">Arial</option>
+                                <option value="Consolas">Consolas</option>
+                                <option value="Courier">Courier</option>
+                                <option value="Courier New">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Trebuchet MS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                            </optgroup>
+
+                            <optgroup label="Mac OS">
+                                <option value="Cochin">Cochin</option>
+                                <option value="Baskerville">Baskerville</option>
+                                <option value="Avenir Book">Avenir Book</option>
+                                <option value="Courier">Courier</option>
+                                <option value="Courier New">Courier New</option>
+                                <option value="Futura Medium">Futura Medium</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Gill Sans">Gill Sans</option>
+                                <option value="Helvetica">Helvetica</option>
+                                <option value="Monaco">Monaco</option>
+                                <option value="Palatino">Palatino</option>
+                                <option value="Times">Times</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Trebuchet MS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                            </optgroup>
+                        </select>
+
+                        <input type="checkbox" id="font-bold" checked="checked"> Bold
+                        <input type="checkbox" id="font-italic"> Italic
+
+                    </fieldset>
+
+                    <fieldset id="controls">
+                        <legend>Export</legend>
+
+                        <div>
+                            <a id="export-data-link" class="button">Link</a> - Sharable link with current configuration.<br>
+                            <a id="export-data-url" class="button" target="_blank">Data URL</a> - Base64 string (<a href="https://en.wikipedia.org/wiki/Data_URI_scheme">?</a>).<br>
+                            <a href="" id="export-imgur" class="button">imgur</a> - Hosted image.
+                            <!-- <a href="./" class="button">Reset</a> -->
+                        </div>
+
+                        <div id="export-result"></div>
+                    </fieldset>
+
+                </div>
+
+                <div style="float: left; margin-left: 4px">
+
+                    <fieldset>
+                        <legend>Colors</legend>
+                        <input type='text' class="color-picker" id="background-color-start" value="#B30000"/>
+
+                        <input type='text' class="color-picker" id="background-color-end" value="#B30000"/>
+
+                        <input type='text' class="color-picker" id="foreground-color" value="#FFFFFF"/>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>Spacing</legend>
+
+                        <p>
+                            Horizontal
+                            <div id="horizontal-slider" style="width: 200px"></div>
+                            <br>
+                        </p>
+
+                        <p>
+                            Vertical
+                            <div id="vertical-slider" style="width: 200px"></div>
+                            <br>
+                        </p>
+
+                        <p>
+                            Line
+                            <div id="line-spacing-slider" style="width: 200px"></div>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Generate</legend>
+
+                        <p>
+                            <input type="button" id="button-random" value="Random" />
+                        </p>
+                    </fieldset>
+
+                </div>
+
+                <div style="clear: both;"></div>
+            </form>
+
+        </div>
+
+        <div class="box">
+            <h2>Examples</h2>
+
+            <p>Some examples of images made with this tool.</p>
+
+            <p>
+                <br>
+                <img src="pictar-assets/examples/pv.png" title="pv" alt="pv" width="128"/>
+                <img src="pictar-assets/examples/rr.png" title="rr" alt="rr" width="128"/>
+                <img src="pictar-assets/examples/pjrs.png" title="pjrs" alt="pjrs" width="128"/>
+                <img src="pictar-assets/examples/jcrs.png" title="jcrs" alt="jcrs" width="128"/>
+                <img src="pictar-assets/examples/jm.png" title="jm" alt="jm" width="128"/>
+            </p>
+
+        </div>
+
+        <div class="box">
+            <h2>Feedback</h2>
+            All feedback is welcome: pedrovam@gmail.com or <a href="http://twitter.com/pmav">@pmav</a>.
+        </div>
+
+
+    </div>
+    <div id="footer">Pictar v1.1 | <a href="http://pmav.eu">pmav.eu</a>
+        | 22/Jan/2015 | HTML 5 | This work is licensed under a <a rel="license" href="assets/LICENSE">MIT License</a>.
+    </div>
+</div>
+
+<script
+    type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try {
+        var pageTracker = _gat._getTracker("UA-284702-17");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }</script>
+</body>
+</html>

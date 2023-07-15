@@ -1,0 +1,71 @@
+body {
+    font: 16px "Helvetica Neue", "Arial", sans-serif;
+}
+
+#wrapper {
+    margin: auto;
+    width: 900px;
+}
+
+header {
+    font-size: 46px;
+}
+
+h1 {
+    font-weight: normal;
+    border-top: 3px solid #000;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 36px;
+}
+
+input.text {
+    width: 80%;
+}
+
+#slider1 {
+    width: 98%;
+    margin: auto;
+}
+
+ui-slider-horizontal {
+    background: red !important;
+}
+
+#generate {
+    font-size: 36px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    background: #EEE;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+#generate:hover {
+    background: #333;
+    color: #EEE;
+}
+
+#output span {
+    background: lightblue;
+    padding: 4px;
+    line-height: 32px;
+}
+
+#output {
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+#output span:hover {
+    background: #333;
+    color: #EEE;
+}
+
+footer a {
+ color: #000;
+}

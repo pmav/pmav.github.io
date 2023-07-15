@@ -1,0 +1,268 @@
+/**
+ * IS 2008 TP2
+ */
+
+body {
+ font-family: "Arial", sans-serif;
+ color: #000000;
+ padding: 0;
+ margin: 0;
+}
+
+#body .b { font-weight: bold; }
+
+#body .success { color: #008C00; }
+
+#body .failed { color: #CC0000; }
+
+#body .pending { color: #DDAA00; }
+
+#wrapper {
+ width: 1000px;
+ margin: auto;
+}
+
+/** ### Header ######################################################################### */
+
+#header {
+ text-transform: uppercase;
+ font-variant: small-caps;
+ letter-spacing: -2px;
+ background: #EEEEEE;
+ margin: 0 0 10px 0;
+ font-weight: bold;
+ padding: 4px 10px;
+ font-size: 40px;
+}
+
+#header a {
+ text-decoration: none;
+ color: #A3B3B2;
+}
+
+/** ### Body ########################################################################### */
+
+#body {
+ background: url('../images/bg.png') no-repeat;
+ padding: 6px 10px;
+}
+
+#body .l { float: left; }
+
+#body .col-list { width: 470px; }
+
+#body .col-list-left {
+ margin-right: 40px;
+ width: 470px;
+}
+
+#body .cl {
+ line-height: 0;
+ clear: both;
+}
+
+#body h1 {
+ letter-spacing: -1px;
+ line-height: 16px;
+ font-size: 26px;
+ color: #595353;
+ margin: 0;
+}
+
+#body h1 a { color: #595353; }
+
+/** ### Menu ########################################################################### */
+
+#body #menu {
+ position: relative;
+ text-align: right;
+ top: -24px;
+}
+
+#body #menu a {
+ text-decoration: none;
+ background: #A3B3B2;
+ font-weight: bold;
+ padding: 2px 4px;
+ color: #595353;
+}
+
+#body #menu a:hover {
+ background: #595353;
+ color: #A3B3B2;
+}
+
+/** ### Forms ########################################################################## */
+
+#body form {
+ border-left: 4px solid #595353;
+ margin: 0 0 50px 4px;
+ padding: 0 0 0 10px;
+}
+
+#body form p { font-size: 14px; }
+
+#body form span {
+ background: #A3B3B2;
+ margin: 0 10px 0 0;
+ font-weight: bold;
+ color: #595353;
+ padding: 4px;
+}
+
+#body form input.submit {
+ border-top: 2px solid #DDDDDD;
+ border-left: 2px solid #DDDDDD;
+ border-right: 2px solid #595353;
+ border-bottom: 2spx solid #595353;
+ background: #EEEEEE;
+ padding: 4px 6px;
+ font-size: 14px;
+ color: #000000;
+}
+
+#body form input.submit:hover {
+ border-top: 2px solid #595353;
+ border-left: 2px solid #595353;
+ border-right: 2px solid #DDDDDD;
+ border-bottom: 2spx solid #DDDDDD;
+ cursor: pointer;
+}
+
+#body form fieldset {
+ border: 1px solid #DDDDDD;
+ padding: 10px 12px;
+ font-size: 26px;
+ color: #595353;
+ width: 300px;
+}
+
+#body form fieldset legend {
+ font-variant: small-caps;
+ font-weight: bold;
+ font-size: 12px;
+ color: #595353;
+}
+
+#body form fieldset input {
+ border: 1px solid #666666;
+ font-size: 24px;
+ color: #A3B3B2;
+ padding: 6px;
+}
+
+/** ### Lists ########################################################################## */
+
+#body .list {
+ border-left: 4px solid #595353;
+ margin: 16px 0 0 4px;
+ padding: 0 0 0 10px;
+}
+
+#body .list .entry {
+ background: #EEEEEE;
+ font-weight: bold;
+ color: #595353;
+ margin: 4px 0;
+ padding: 4px;
+}
+
+#body .list .entry:hover {
+ background: #595353;
+}
+
+#body .list .entry:hover a {
+ color: #EEEEEE;
+}
+
+#body .list .entry a {
+ text-decoration: none;
+ color: #595353;
+}
+
+/** ### Single Photo/Invoice ############################################################ */
+
+#body #photo, #body #invoice {
+ margin: 20px 0 40px 4px;
+ padding: 0 0 0 14px;
+}
+
+#body #photo img, #body #invoice img {
+ border: 1px solid #595353;
+ margin: 0 4px 0 0;
+ padding: 2px;
+ float: left;
+}
+
+#body #photo h2, #body #invoice h2 {
+ margin: 28px 0 10px 0;
+ line-height: 20px;
+ color: #595353;
+}
+
+#body #photo p, #body #invoice p {
+ font-size: 14px;
+ margin: 0;
+}
+
+#body #photo p a, #body #invoice p a {
+ text-decoration: none;
+ color: #595353;
+}
+
+#body #photo p a:hover, #body #invoice p a:hover { border-bottom: 1px dotted #595353; }
+
+#body #photo .tags a {
+ text-decoration: none;
+ background: #A3B3B2;
+ font-weight: bold;
+ padding: 2px 4px;
+ color: #595353;
+ line-height: 26px;
+}
+
+#body #photo .tags a:hover {
+ background: #595353;
+ color: #A3B3B2;
+}
+
+#body .owned p { font-size: 14px; }
+
+#body .owned a { color: #595353; }
+
+/** ### Photo/Invoice List ############################################################# */
+
+#body .photo-entry, #body .invoice-entry {
+ margin: 0 0 20px 0;
+ font-size: 14px;
+ padding: 4px;
+}
+
+#body .photo-entry:hover, #body .invoice-entry:hover { background: #EEEEEE; }
+
+#body .photo-entry a, #body .invoice-entry a {
+ text-decoration: none;
+ color: #595353;
+}
+
+#body .photo-entry a:hover, #body .invoice-entry a:hover { border-bottom: 1px dotted #595353; }
+
+#body .photo-entry img, #body .invoice-entry img {
+ border: 1px solid #595353;
+ margin: 0 4px 0 0;
+ padding: 2px;
+ float: left;
+}
+
+/** ### Footer ######################################################################### */
+
+#footer {
+ background: #EEEEEE;
+ text-align: center;
+ padding: 6px 10px;
+ font-weight: bold;
+ font-size: 10px;
+ color: #595353;
+}
+
+#footer a { color: #595353; }

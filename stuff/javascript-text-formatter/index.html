@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta name="description" content="javascript css text formatter - test how css manipulates text">
+  <meta name="keywords" content="javascript, js, css, format, fonts, web, html, effects, text">
+  <meta name="language" content="en">
+  <meta name="robots" content="all">
+  <script type="text/javascript" src="javascript-text-formatter.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!--[if IE]>
+   <style>
+    #input form fieldset legend { font-size: 12px; }
+    #output #info { padding: 0 0 6px 0; }
+    #output #info form fieldset.text textarea { width: 270px; }
+   </style>
+  <![endif]-->
+  <title>JS Text Formatter</title>
+ </head>
+ <body>
+  <div id="container">
+
+   <div id="input">
+    <form name="form1">
+     <fieldset>
+      <legend>Font</legend>
+      <select name="vfont" onchange="changeFont();">
+       <option value="0">Arial</option>
+       <option value="1">Comic Sans MS</option>
+       <option value="2">Courier</option>
+       <option value="3">Courier New</option>
+       <option value="4">Franklin Gothic</option>
+       <option value="5">Georgia</option>
+       <option value="6">Impact</option>
+       <option value="7">Lucida Console</option>
+       <option value="8">Lucida Sans Unicode</option>
+       <option value="9">Lucida Sans</option>
+       <option value="10">Palatino Linotype</option>
+       <option value="11">Tahoma</option>
+       <option value="12">Times New Roman</option>
+       <option value="13">Verdana</option>
+      </select>
+      <br />
+      <input type="button" class="button" value="-" onclick="changeSize(0);" />
+      <input name="vsize" size="1" readonly="readonly" />
+      <input type="button" class="button" value="+" onclick="changeSize(1);" /> Font-size
+     </fieldset>
+     
+     <fieldset>
+      <legend>Various</legend>
+      <input type="checkbox" name="vbold" onchange="if (!ie) changeBold();" onpropertychange="changeBold();" /> Bold <br />
+      <input type="checkbox" name="vitalic" onchange="if (!ie) changeItalic();" onpropertychange="changeItalic();" /> Italic <br />
+      <input type="checkbox" name="vsmallcaps" onchange="if (!ie) changeSmallcaps();" onpropertychange="changeSmallcaps();" /> Small-caps
+     </fieldset>
+          
+     <fieldset>
+      <legend>Text Decoration</legend>
+      <input type="checkbox" name="vunderline" onchange="if (!ie) changeUnderline();" onpropertychange="changeUnderline();" /> Underline <br />
+      <input type="checkbox" name="voverline" onchange="if (!ie) changeOverline();" onpropertychange="changeOverline();" /> Overline <br />
+      <input type="checkbox" name="vlinethrough" onchange="if (!ie) changeLinethrough();" onpropertychange="changeLinethrough();" /> Line-through
+     </fieldset>
+   
+     <fieldset>
+      <legend>Text Transform</legend>
+      <input type="radio" name="vcase" onchange="if (!ie) changeCase(0);" onpropertychange="changeCase(0);" checked="checked" /> None <br />
+      <input type="radio" name="vcase" onchange="if (!ie) changeCase(1);" onpropertychange="changeCase(1);" /> Lowercase <br />
+      <input type="radio" name="vcase" onchange="if (!ie) changeCase(2);" onpropertychange="changeCase(2);" /> Uppercase <br />
+      <input type="radio" name="vcase" onchange="if (!ie) changeCase(3);" onpropertychange="changeCase(3);" /> Capitalize
+     </fieldset>
+   
+     <fieldset>
+      <legend>Text Align</legend>
+      <input type="radio" name="valign" onchange="if (!ie) changeAlign(0);" onpropertychange="changeAlign(0);" checked="checked" /> Left <br />
+      <input type="radio" name="valign" onchange="if (!ie) changeAlign(1);" onpropertychange="changeAlign(1);" /> Right <br />
+      <input type="radio" name="valign" onchange="if (!ie) changeAlign(2);" onpropertychange="changeAlign(2);" /> Center <br />
+      <input type="radio" name="valign" onchange="if (!ie) changeAlign(3);" onpropertychange="changeAlign(3);" /> Justify
+     </fieldset>
+     
+     <fieldset>
+      <legend>Spacing</legend>
+      <input type="button" class="button" value="-" onclick="changeLetterspacing(0);" />
+      <input name="vletterspacing" size="1" readonly="readonly" />
+      <input type="button" class="button" value="+" onclick="changeLetterspacing(1);" /> Letter-spacing <span class="reset" onclick="resetLetterspacing();" title="reset">[r]</span> <br />
+      <input type="button" class="button" value="-" onclick="changeWordspacing(0);" />
+      <input name="vwordspacing" size="1" readonly="readonly" />
+      <input type="button" class="button" value="+" onclick="changeWordspacing(1);" /> Word-spacing <span class="reset" onclick="resetWordspacing();" title="reset">[r]</span> <br />
+      <input type="button" class="button" value="-" onclick="changeLineheight(0);" />
+      <input name="vlineheight" size="1" readonly="readonly" />
+      <input type="button" class="button" value="+" onclick="changeLineheight(1);" /> Line-height <br />
+      <input type="button" class="button" value="-" onclick="changeTextindent(0);" />
+      <input name="vtextindent" size="1" readonly="readonly" />
+      <input type="button" class="button" value="+" onclick="changeTextindent(1);" /> Text-indent <span class="reset" onclick="resetTextindent();" title="reset">[r]</span>
+     </fieldset>
+     
+     <fieldset>
+      <legend>Colors</legend>
+      <input type="text" name="vtextcolor" size="7" onkeyup="changeTextcolor();" class="special" /> Foreground <br />
+      <input type="text" name="vbackcolor" size="7" onkeyup="changeBackcolor();" /> Background
+     </fieldset>
+    </form>
+   </div>
+
+   <div id="output">
+    <div id="info">
+     <form name="form2">
+      <fieldset class="code">
+       <legend>CSS Code</legend>
+       <textarea name="code" readonly="readonly"></textarea>
+      </fieldset>
+      <fieldset class="text">
+       <legend>Input Text</legend>
+       <textarea name="text" onkeyup="changeText();"></textarea>
+      </fieldset>
+     </form>
+     <div class="cl">&nbsp;</div>
+    </div>
+    <div id="outputtext"></div>
+   </div>
+
+   <div id="footer">
+    <a href="http://pmav.eu">pmav.eu</a>, 2007
+   </div>
+
+  </div>
+ </body>
+</html>

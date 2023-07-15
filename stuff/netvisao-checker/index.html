@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="iso-8859-1" ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta name="description" content="Netvisão Checker - Programa para verificar os consumos na Netvisão" />
+
+  <meta name="keywords" content="netvisão, cabovisão, consumos, consumo, estatísticas, estatística, tráfego, limite, leituras, leitura, programa, aplicação, clientes, clientes, conta" />
+  <meta name="generator" content="Notepad" />
+  <meta name="revisit-after" content="15" />
+  <meta name="language" content="PT" />
+
+  <link rel="stylesheet" type="text/css" href="main.css" />
+
+  <title>Netvisão Checker</title>
+ </head>
+ <body>
+
+  <div id="title">NetvCK : 1.5.2e</div>
+
+  <div id="container">
+
+   <div id="alert">Este programa não é actualizado desde 2007 e o seu funcionamento já não é garantido. Esta página é mantida de modo a partilhar uma base de código que poderá ser utilizada para iniciar projectos semelhantes.</div>
+
+   <span class="title">O que é?</span>
+   <div class="ie-crap">
+    <div class="body">
+     O NetvCK (<span class="code">Netvisão Checker</span>) é um pequeno programa que permite ao utilizador aceder a algumas estatísticas de consumos associadas à sua conta na <a href="http://www.netvisao.pt">Netvisão</a> sem ter de visitar a página disponibilizada para o efeito.<br /><br />
+     Podem ser consultados os seguintes valores:
+     <ul>
+      <li>Número do Equipamento Associado</li>
+      <li>Quantidade de Tráfego Utilizado (GB)</li>
+      <li>Data da Última Leitura</li>
+      <li>Limite de Tráfego Grátis (GB)</li>
+      <li>Percentagem do Tráfego Utilizado</li>
+     </ul>
+     Corre em linha de comandos e necessita apenas de receber o <span class="code">número de cliente</span> e <span class="code">password</span>. Esta informação não é partilhada com ninguém e é imediatamente descartada após a execução do programa. (Este não contém qualquer espécie de vírus ou spyware.)<br /><br />
+     <span class="red">ATENÇÃO</span>: a utilização deste programa não dispensa a verificação dos consumos na página destinada a tal, <a href="http://clientes.cabovisao.pt">http://clientes.cabovisao.pt</a>. O autor não se responsabliza por qualquer espécie de má utilização do programa ou situação daí resultante.
+    </div>
+   </div>
+
+   <div class="sep"></div>
+
+   <span class="title">Notícias</span>
+   <div class="ie-crap">
+    <div class="body">
+     <ul>
+      <li>04/Set/2006 - Ícone da Cabovisão acompanha agora o executável (v1.5.1c-040906).</li>
+      <li>13/Ago/2006 - Página online com a primeira versão pública (v1.5.1c-260806).</li>
+      <li>03/Mar/2007 - Alterações para garantir a compatibilidade com a nova página de estatísticas (v1.5.2b-030307)</li>
+      <li>29/Jun/2007 - Alterações para garantir funcionamento com as alterações no login (v1.5.2d-290607)</li>
+      <li>24/Nov/2007 - Alterações para garantir a compatibilidade com a nova página de estatísticas (v1.5.2e-241107)</li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="sep"></div>
+
+   <span class="title">Screenshot</span>
+   <div class="ie-crap">
+    <div class="body">
+     <div class="fl">
+      O programa corre em linha de comandos e limita-se a mostrar informação retirada da página inicial de estatísticas.<br /><br />
+      A execução típica é demonstrada na imagem à direita.
+     </div>
+     <div class="fr"><img src="s1.png" alt="NetvCK" /></div>
+     <div class="cl"></div>
+    </div>
+   </div>
+
+   <span class="title">Download</span>
+   <div class="ie-crap">
+    <div class="body">
+     Para Windows 95/98/2000/XP o download pode ser feito aqui: <a href="files/netvck-1.5.2e.exe">netvck-1.5.2e.exe</a>.<p />
+     Para Linux podem usar o código fonte e executar com um interpretador de <a href="http://www.ruby-lang.org/en/20020102.html">Ruby</a> ou ler mais <a href="http://www.erikveen.dds.nl/rubyscript2exe/index.html#3.1.0">aqui</a> sobre o funcionamento do <a href="http://www.erikveen.dds.nl/rubyscript2exe/index.html">RubyScript2exe</a> para Linux.<p />
+     A versão Windows (.exe) foi criada com o RubyScript2exe <span class="code">v0.5.1</span> a correr Ruby <span class="code">v1.8.5</span> de modo a ser completamente stand-alone, no entanto o código continua a ser <a href="http://en.wikipedia.org/wiki/Interpreted_language">interpretado</a> (e não compilado) como qualquer outro script em <a href="http://en.wikipedia.org/wiki/Ruby_programming_language">Ruby (Wikipedia)</a>.
+    </div>
+   </div>
+
+   <div class="sep"></div>
+
+   <span class="title">Funcionamento</span>
+   <div class="ie-crap">
+    <div class="body">
+     Não é necessária qualquer instalação e o seu funcionamento restringe-se à execução do ficheiro utilizando a seguinte sintaxe:<br /><br />
+     <span class="code">&gt; netvck.exe &lt;número de cliente&gt; &lt;password&gt;</span><br /><br />
+     Exemplo:<br />
+     <span class="code">&gt; netvck.exe 12345678 abcdefgh</span><br /><br />
+     A interpretação dos dados é trivial e aquando de um erro é emitida uma mensagem em conformidade. Existem três fases distintas:<br />
+     <ul>
+      <li>Cookie: quando tenta receber o cookie necessário à autenticação;</li>
+      <li>Login: o programa efectua a autenticação na página;</li>
+      <li>Stats: o programa faz download do HTML da página inicial da zona de estatísticas.</li>
+     </ul>
+     De seguida é efectuado o parsing e apresentados os resultados. Em qualquer uma das três fases acima descritas pode se dar um erro, nesse caso é aconselhável verificar se introduziu os dados correctamente (número de cliente e password) e se o erro persistir consultar a página utilizando o método habitual.<br /><br />
+     Sugestão: a utilização de um ficheiro batch (.bat) evita a escrita constante do número de cliente e password.
+    </div>
+   </div>
+
+   <div class="sep"></div>
+
+   <span class="title">Código Fonte</span>
+   <div class="ie-crap">
+    <div class="body">
+     O código fonte pode ser encontrado aqui: <a href="src/netvck-1.5.2e.rb">netvck-1.5.2e.rb</a> <!-- (HTML: <a href="src/netvck-1.5.1c.rb.html">netvck-1.5.1c.rb.html</a>) --><br /><br />
+     Para o correr é necessária a presença do <a href="http://www.ruby-lang.org">Ruby</a> no sistema.<br /><br />
+     Foi utilizada a biblioteca <a href="http://www.ruby-doc.org/stdlib/libdoc/net/http/rdoc/index.html">net/http.rb</a> para efectuar as ligações à página e o script <a href="http://www.erikveen.dds.nl/rubyscript2exe/index.html">RubyScript2exe</a> para junção (<span class="code">script, ruby.exe, bibliotecas, etc</span>).
+    </div>
+   </div>
+
+   <div class="sep"></div>
+
+   <span class="title">Contacto</span>
+   <div class="ie-crap">
+    <div class="body">Questões, sugestões e qualquer outro tipo de contacto pode ser efectuado via: <span class="m">pedrovam[at]gmail(d0t)com</span></div>
+   </div>
+
+   <div class="sep"></div>
+
+   <span class="title">Agradecimentos</span>
+   <div class="ie-crap">
+    <div class="body">
+     <a href="http://clientes.netvisao.pt/monochrome/">Kenny69</a>, pelo ícone que agora acompanha o programa.
+    </div>
+   </div>
+
+  </div>
+
+  <div id="footer">NetvCK 1.5.2e | 24/Nov/2007 | <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> | <a href="http://pmav.eu">pmav.eu</a></div>
+
+  <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-284702-17"); pageTracker._trackPageview(); } catch(err) {}</script>
+ </body>
+</html>
